@@ -2638,3 +2638,4 @@ MrBayes > execute sequences-aligned-MUSCLE-mb.nexus
        length[2]     0.009473    0.000015    0.003447    0.017463    0.009035
        length[3]     0.004083    0.000011    0.000058
 
+##### MrBayes output files were moved to the results directory in the main /MyProject directory.
