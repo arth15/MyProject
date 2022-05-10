@@ -1333,1258 +1333,1259 @@ cat sequences-aligned-MUSCLE.nexus mbblock.txt > sequences-aligned-MUSCLE-mb.nex
 ##### Run MrBayes with both new files
 mb sequences-aligned-clustalw2-mb.nexus
 
-# Executing file "sequences-aligned-clustalw2-mb.nexus"
-#    DOS line termination
-#    Longest line length = 761
-#    Parsing file
-#    Expecting NEXUS formatted file
-#    Reading taxa block
-#       Allocated taxon set
-#       Defining new set of 20 taxa
-#    Exiting taxa block
-#    Reading characters block
-#       Allocated matrix
-#       Defining new character matrix with 741 characters
-#       Missing data coded as ?
-#       Gaps coded as -
-#       Matching characters coded as .
-#       Data is Protein
-#       Taxon  1 -> XP_002749725.2
-#       Taxon  2 -> XP_032134401.1
-#       Taxon  3 -> XP_039325526.1
-#       Taxon  4 -> PNI67080.1
-#       Taxon  5 -> XP_008972488.1
-#       Taxon  6 -> NP_001266520.1
-#       Taxon  7 -> PNJ73451.1
-#       Taxon  8 -> P0CB68.1
-#       Taxon  9 -> XP_032610702.1
-#       Taxon 10 -> XP_030659807.1
-#       Taxon 11 -> Q4R6K9.1
-#       Taxon 12 -> XP_025261308.1
-#       Taxon 13 -> XP_003907894.1
-#       Taxon 14 -> XP_010350948.1
-#       Taxon 15 -> XP_033086464.1
-#       Taxon 16 -> XP_011805264.1
-#       Taxon 17 -> XP_023075176.1
-#       Taxon 18 -> XP_015990567.2
-#       Taxon 19 -> XP_006921444.1
-#       Taxon 20 -> XP_011224853.1
-#       Successfully read matrix
-#       Setting default partition (does not divide up characters)
-#       Setting model defaults
-#       Seed (for generating default start values) = 1652144653
-#       Setting output file names to "sequences-aligned-clustalw2-mb.nexus.run<i>.<p|t>"
-#    Exiting characters block
-#    Reading mrbayes block
-#       Setting autoclose to yes
-#       Setting Brlenspr to Unconstrained:Exponential(10.00)
-#       Successfully set prior model parameters
-#       Setting Shapepr to Exponential(1.00)
-#       Successfully set prior model parameters
-#       Setting Statefreqpr to Dirichlet(1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00)
-#       Successfully set prior model parameters
-#       Nst =1 unchanged because dataType is not DNA or RNA
-#       Setting Rates to Gamma
-#       Setting Ngammacat to 4
-#       Successfully set likelihood model parameters
-#       Setting number of generations to 10000
-#       Setting sample frequency to 10
-#       Setting print frequency to 100
-#       WARNING: Reallocation of zero size attempted. This is probably a bug. Problems may follow.
-#       WARNING: Reallocation of zero size attempted. This is probably a bug. Problems may follow.
-#       Setting number of runs to 1
-#       WARNING: Allocation of zero size attempted. This is probably a bug; problems may follow.
-#       Setting number of chains to 3
-#       Setting chain output file names to "sequences-aligned-clustalw2-mb.nexus.<p/t>"
-#       Successfully set chain parameters
-#       Running Markov chain
-#       MCMC stamp = 2380591072
-#       Seed = 444786498
-#       Swapseed = 1652144653
-#       Model settings:
-# 
-#          Data not partitioned --
-#             Datatype  = Protein
-#             Aamodel   = Poisson
-#                         Substitution rates are fixed to be equal
-#             Covarion  = No
-#             # States  = 20
-#                         State frequencies are fixed to be equal
-#             Rates     = Gamma
-#                         The distribution is approximated using 4 categories.
-#                         Shape parameter is exponentially
-#                         distributed with parameter (1.00).
-# 
-#       Active parameters:
-# 
-#          Parameters
-#          ---------------------
-#          Statefreq           1
-#          Shape               2
-#          Ratemultiplier      3
-#          Topology            4
-#          Brlens              5
-#          ---------------------
-# 
-#          1 --  Parameter  = Pi
-#                Type       = Stationary state frequencies
-#                Prior      = Fixed (equal frequencies)
-# 
-#          2 --  Parameter  = Alpha
-#                Type       = Shape of scaled gamma distribution of site rates
-#                Prior      = Exponential(1.00)
-# 
-#          3 --  Parameter  = Ratemultiplier
-#                Type       = Partition-specific rate multiplier
-#                Prior      = Fixed(1.0)
-# 
-#          4 --  Parameter  = Tau
-#                Type       = Topology
-#                Prior      = All topologies equally probable a priori
-#                Subparam.  = V
-# 
-#          5 --  Parameter  = V
-#                Type       = Branch lengths
-#                Prior      = Unconstrained:Exponential(10.0)
-# 
-# 
-# 
-#       The MCMC sampler will use the following moves:
-#          With prob.  Chain will use move
-#             1.96 %   Multiplier(Alpha)
-#             9.80 %   ExtSPR(Tau,V)
-#             9.80 %   ExtTBR(Tau,V)
-#             9.80 %   NNI(Tau,V)
-#             9.80 %   ParsSPR(Tau,V)
-#            39.22 %   Multiplier(V)
-#            13.73 %   Nodeslider(V)
-#             5.88 %   TLMultiplier(V)
-# 
-#       Division 1 has 83 unique site patterns
-#       Initializing conditional likelihoods
-#       Using standard non-SSE likelihood calculator for division 1 (single-precision)
-# 
-#       Initial log likelihoods and log prior probs:
-#          Chain 1 -- -3447.391078 -- 29.948048
-#          Chain 2 -- -3431.369724 -- 29.948048
-#          Chain 3 -- -3443.422600 -- 29.948048
-# 
-# 
-#       Chain results (10000 generations requested):
-# 
-#           0 -- [-3447.391] (-3431.370) (-3443.423)
-#         100 -- (-3203.378) (-3145.626) [-3071.734] -- 0:00:00
-#         200 -- (-3138.762) (-3049.656) [-2998.909] -- 0:00:00
-#         300 -- (-3087.826) (-3022.145) [-2934.907] -- 0:00:32
-#         400 -- (-3070.174) (-2972.479) [-2926.922] -- 0:00:24
-#         500 -- (-3051.897) (-2954.022) [-2918.006] -- 0:00:19
-#         600 -- (-2982.448) (-2943.887) [-2915.282] -- 0:00:15
-#         700 -- (-2977.358) (-2942.281) [-2911.227] -- 0:00:26
-#         800 -- (-2970.503) (-2920.651) [-2897.664] -- 0:00:23
-#         900 -- (-2960.689) (-2925.585) [-2904.571] -- 0:00:20
-#        1000 -- (-2956.478) (-2901.239) [-2898.607] -- 0:00:18
-#        1100 -- (-2943.061) (-2899.490) [-2895.676] -- 0:00:16
-#        1200 -- (-2925.308) (-2900.705) [-2897.234] -- 0:00:22
-#        1300 -- (-2919.181) (-2905.951) [-2892.286] -- 0:00:20
-#        1400 -- (-2912.759) (-2900.041) [-2891.701] -- 0:00:18
-#        1500 -- (-2901.447) (-2905.908) [-2897.899] -- 0:00:22
-#        1600 -- [-2897.313] (-2909.459) (-2910.712) -- 0:00:21
-#        1700 -- (-2902.809) (-2903.784) [-2897.153] -- 0:00:19
-#        1800 -- [-2901.215] (-2900.149) (-2895.941) -- 0:00:22
-#        1900 -- (-2901.399) [-2898.880] (-2900.476) -- 0:00:21
-#        2000 -- [-2899.565] (-2903.246) (-2905.301) -- 0:00:20
-#        2100 -- (-2904.187) [-2902.233] (-2908.990) -- 0:00:18
-#        2200 -- (-2901.564) [-2906.997] (-2903.849) -- 0:00:21
-#        2300 -- [-2900.091] (-2907.612) (-2909.340) -- 0:00:20
-#        2400 -- [-2904.171] (-2913.834) (-2897.550) -- 0:00:19
-#        2500 -- [-2887.359] (-2914.405) (-2898.646) -- 0:00:18
-#        2600 -- (-2902.978) (-2908.095) [-2895.599] -- 0:00:19
-#        2700 -- (-2912.420) [-2901.331] (-2898.169) -- 0:00:18
-#        2800 -- [-2901.860] (-2903.213) (-2893.262) -- 0:00:18
-#        2900 -- (-2893.927) [-2901.625] (-2921.416) -- 0:00:17
-#        3000 -- (-2909.322) [-2903.930] (-2913.381) -- 0:00:18
-#        3100 -- (-2911.274) (-2901.080) [-2906.888] -- 0:00:17
-#        3200 -- [-2917.037] (-2897.076) (-2914.303) -- 0:00:17
-#        3300 -- (-2902.127) [-2896.673] (-2903.737) -- 0:00:18
-#        3400 -- [-2902.271] (-2905.703) (-2916.919) -- 0:00:17
-#        3500 -- [-2891.609] (-2896.783) (-2914.372) -- 0:00:16
-#        3600 -- [-2901.497] (-2907.363) (-2921.615) -- 0:00:17
-#        3700 -- (-2896.501) [-2898.093] (-2904.163) -- 0:00:17
-#        3800 -- (-2900.326) [-2890.092] (-2911.180) -- 0:00:17
-#        3900 -- (-2900.787) [-2890.108] (-2903.201) -- 0:00:17
-#        4000 -- (-2899.527) [-2896.887] (-2913.365) -- 0:00:16
-#        4100 -- (-2901.410) (-2894.666) [-2895.370] -- 0:00:17
-#        4200 -- (-2895.538) [-2891.738] (-2903.689) -- 0:00:16
-#        4300 -- [-2896.945] (-2908.828) (-2903.852) -- 0:00:15
-#        4400 -- [-2894.652] (-2906.625) (-2903.182) -- 0:00:16
-#        4500 -- (-2898.890) (-2897.872) [-2897.863] -- 0:00:17
-#        4600 -- [-2902.565] (-2894.465) (-2894.423) -- 0:00:16
-#        4700 -- (-2929.581) [-2896.141] (-2891.066) -- 0:00:16
-#        4800 -- [-2904.808] (-2894.871) (-2897.012) -- 0:00:16
-#        4900 -- (-2915.900) [-2891.043] (-2901.435) -- 0:00:15
-#        5000 -- (-2918.304) (-2896.252) [-2901.370] -- 0:00:16
-#        5100 -- [-2899.138] (-2902.799) (-2893.520) -- 0:00:15
-#        5200 -- (-2904.277) [-2895.283] (-2894.701) -- 0:00:14
-#        5300 -- (-2906.372) [-2896.275] (-2906.761) -- 0:00:15
-#        5400 -- (-2902.793) (-2893.753) [-2894.200] -- 0:00:14
-#        5500 -- (-2911.737) [-2898.834] (-2899.710) -- 0:00:14
-#        5600 -- (-2909.835) (-2900.876) [-2896.282] -- 0:00:14
-#        5700 -- (-2905.703) (-2898.637) [-2897.890] -- 0:00:14
-#        5800 -- (-2900.002) (-2905.043) [-2888.399] -- 0:00:13
-#        5900 -- (-2905.343) (-2904.851) [-2889.113] -- 0:00:13
-#        6000 -- (-2905.021) (-2904.331) [-2899.267] -- 0:00:13
-#        6100 -- (-2920.486) [-2899.467] (-2900.647) -- 0:00:13
-#        6200 -- [-2890.093] (-2916.948) (-2900.153) -- 0:00:12
-#        6300 -- (-2916.330) (-2930.068) [-2897.102] -- 0:00:12
-#        6400 -- [-2900.142] (-2902.543) (-2894.546) -- 0:00:12
-#        6500 -- [-2889.366] (-2902.223) (-2909.083) -- 0:00:11
-#        6600 -- (-2892.552) [-2901.636] (-2901.535) -- 0:00:11
-#        6700 -- [-2899.834] (-2898.559) (-2913.702) -- 0:00:11
-#        6800 -- [-2901.817] (-2907.569) (-2906.562) -- 0:00:10
-#        6900 -- [-2899.297] (-2904.268) (-2898.044) -- 0:00:10
-#        7000 -- (-2916.206) (-2891.895) [-2903.363] -- 0:00:10
-#        7100 -- (-2909.625) [-2901.909] (-2902.906) -- 0:00:10
-#        7200 -- (-2906.780) (-2919.118) [-2906.894] -- 0:00:09
-#        7300 -- (-2910.976) [-2899.759] (-2902.340) -- 0:00:09
-#        7400 -- (-2901.622) (-2901.039) [-2895.023] -- 0:00:08
-#        7500 -- [-2900.184] (-2903.671) (-2900.410) -- 0:00:08
-#        7600 -- [-2902.921] (-2895.128) (-2895.640) -- 0:00:08
-#        7700 -- (-2905.771) (-2899.342) [-2891.427] -- 0:00:08
-#        7800 -- (-2902.684) (-2899.594) [-2888.272] -- 0:00:07
-#        7900 -- (-2893.907) [-2900.439] (-2912.304) -- 0:00:07
-#        8000 -- (-2890.377) [-2904.191] (-2914.526) -- 0:00:06
-#        8100 -- [-2895.925] (-2898.714) (-2899.928) -- 0:00:06
-#        8200 -- (-2900.598) (-2896.014) [-2902.317] -- 0:00:06
-#        8300 -- (-2894.125) (-2904.740) [-2897.937] -- 0:00:05
-#        8400 -- [-2895.418] (-2897.624) (-2898.691) -- 0:00:05
-#        8500 -- (-2894.493) (-2890.173) [-2895.029] -- 0:00:05
-#        8600 -- (-2897.036) (-2902.854) [-2890.297] -- 0:00:04
-#        8700 -- (-2892.208) (-2908.880) [-2896.010] -- 0:00:04
-#        8800 -- (-2891.184) (-2912.111) [-2891.879] -- 0:00:04
-#        8900 -- (-2899.961) [-2901.905] (-2892.602) -- 0:00:03
-#        9000 -- [-2895.140] (-2910.247) (-2902.787) -- 0:00:03
-#        9100 -- (-2895.209) [-2906.508] (-2899.977) -- 0:00:03
-#        9200 -- (-2900.764) (-2903.250) [-2895.906] -- 0:00:02
-#        9300 -- (-2901.886) [-2897.475] (-2899.333) -- 0:00:02
-#        9400 -- (-2903.971) (-2896.277) [-2894.536] -- 0:00:02
-#        9500 -- (-2902.498) [-2896.619] (-2911.116) -- 0:00:01
-#        9600 -- (-2896.303) (-2907.721) [-2900.613] -- 0:00:01
-#        9700 -- [-2891.318] (-2912.745) (-2896.420) -- 0:00:01
-#        9800 -- (-2908.679) (-2895.056) [-2891.776] -- 0:00:00
-#        9900 -- (-2897.314) [-2901.919] (-2897.424) -- 0:00:00
-#       10000 -- (-2897.215) [-2892.232] (-2898.638) -- 0:00:00
-# 
-#       Analysis completed in 36 seconds
-#       Analysis used 35.70 seconds of CPU time
-#       Log likelihood of best state for "cold" chain was -2883.18
-# 
-#       Acceptance rates for the moves in the "cold" chain:
-#          With prob.   (last 100)   chain accepted proposals by move
-#             86.1 %     ( 93 %)     Multiplier(Alpha)
-#             16.3 %     ( 23 %)     ExtSPR(Tau,V)
-#             13.6 %     ( 11 %)     ExtTBR(Tau,V)
-#             24.9 %     ( 24 %)     NNI(Tau,V)
-#             16.2 %     ( 16 %)     ParsSPR(Tau,V)
-#             76.0 %     ( 65 %)     Multiplier(V)
-#             58.8 %     ( 57 %)     Nodeslider(V)
-#             29.0 %     ( 33 %)     TLMultiplier(V)
-# 
-#       Chain swap information:
-# 
-#                  1     2     3
-#            --------------------
-#          1 |        0.64  0.37
-#          2 |  3354        0.60
-#          3 |  3343  3303
-# 
-#       Upper diagonal: Proportion of successful state exchanges between chains
-#       Lower diagonal: Number of attempted state exchanges between chains
-# 
-#       Chain information:
-# 
-#         ID -- Heat
-#        -----------
-#          1 -- 1.00  (cold chain)
-#          2 -- 0.91
-#          3 -- 0.83
-# 
-#       Heat = 1 / (1 + T * (ID - 1))
-#          (where T = 0.10 is the temperature and ID is the chain number)
-# 
-#       Summarizing trees in file "sequences-aligned-clustalw2-mb.nexus.t"
-#       Using relative burnin ('relburnin=yes'), discarding the first 25 % of sampled trees
-#       Writing statistics to files sequences-aligned-clustalw2-mb.nexus.<parts|tstat|vstat|trprobs|con>
-#       Examining file ...
-#       Found one tree block in file "sequences-aligned-clustalw2-mb.nexus.t" with 1001 trees in last block
-# 
-#       Tree reading status:
-# 
-#       0      10      20      30      40      50      60      70      80      90     100
-#       v-------v-------v-------v-------v-------v-------v-------v-------v-------v-------v
-#       *********************************************************************************
-# 
-#       Read 1001 trees from last tree block (sampling 751 of them)
-# 
-#       General explanation:
-# 
-#       In an unrooted tree, a taxon bipartition (split) is specified by removing a
-#       branch, thereby dividing the species into those to the left and those to the
-#       right of the branch. Here, taxa to one side of the removed branch are denoted
-#       '.' and those to the other side are denoted '*'. Specifically, the '.' symbol
-#       is used for the taxa on the same side as the outgroup.
-# 
-#       In a rooted or clock tree, the tree is rooted using the model and not by
-#       reference to an outgroup. Each bipartition therefore corresponds to a clade,
-#       that is, a group that includes all the descendants of a particular branch in
-#       the tree.  Taxa that are included in each clade are denoted using '*', and
-#       taxa that are not included are denoted using the '.' symbol.
-# 
-#       The output first includes a key to all the bipartitions with frequency larger
-#       or equual to (Minpartfreq) in at least one run. Minpartfreq is a parameter to
-#       sumt command and currently it is set to 0.10.  This is followed by a table
-#       with statistics for the informative bipartitions (those including at least
-#       two taxa), sorted from highest to lowest probability. For each bipartition,
-#       the table gives the number of times the partition or split was observed in all
-#       runs (#obs) and the posterior probability of the bipartition (Probab.), which
-#       is the same as the split frequency. If several runs are summarized, this is
-#       followed by the minimum split frequency (Min(s)), the maximum frequency
-#       (Max(s)), and the standard deviation of frequencies (Stddev(s)) across runs.
-#       The latter value should approach 0 for all bipartitions as MCMC runs converge.
-# 
-#       This is followed by a table summarizing branch lengths, node heights (if a
-#       clock model was used) and relaxed clock parameters (if a relaxed clock model
-#       was used). The mean, variance, and 95 % credible interval are given for each
-#       of these parameters. If several runs are summarized, the potential scale
-#       reduction factor (PSRF) is also given; it should approach 1 as runs converge.
-#       Node heights will take calibration points into account, if such points were
-#       used in the analysis.
-# 
-#       Note that Stddev may be unreliable if the partition is not present in all
-#       runs (the last column indicates the number of runs that sampled the partition
-#       if more than one run is summarized). The PSRF is not calculated at all if
-#       the partition is not present in all runs.The PSRF is also sensitive to small
-#       sample sizes and it should only be considered a rough guide to convergence
-#       since some of the assumptions allowing one to interpret it as a true potential
-#       scale reduction factor are violated in MrBayes.
-# 
-#       List of taxa in bipartitions:
-# 
-#          1 -- XP_002749725.2
-#          2 -- XP_032134401.1
-#          3 -- XP_039325526.1
-#          4 -- PNI67080.1
-#          5 -- XP_008972488.1
-#          6 -- NP_001266520.1
-#          7 -- PNJ73451.1
-#          8 -- P0CB68.1
-#          9 -- XP_032610702.1
-#         10 -- XP_030659807.1
-#         11 -- Q4R6K9.1
-#         12 -- XP_025261308.1
-#         13 -- XP_003907894.1
-#         14 -- XP_010350948.1
-#         15 -- XP_033086464.1
-#         16 -- XP_011805264.1
-#         17 -- XP_023075176.1
-#         18 -- XP_015990567.2
-#         19 -- XP_006921444.1
-#         20 -- XP_011224853.1
-# 
-#       Key to taxon bipartitions (saved to file "sequences-aligned-clustalw2-mb.nexus.parts"):
-# 
-#       ID -- Partition
-#       --------------------------
-#        1 -- .*******************
-#        2 -- .*..................
-#        3 -- ..*.................
-#        4 -- ...*................
-#        5 -- ....*...............
-#        6 -- .....*..............
-#        7 -- ......*.............
-#        8 -- .......*............
-#        9 -- ........*...........
-#       10 -- .........*..........
-#       11 -- ..........*.........
-#       12 -- ...........*........
-#       13 -- ............*.......
-#       14 -- .............*......
-#       15 -- ..............*.....
-#       16 -- ...............*....
-#       17 -- ................*...
-#       18 -- .................*..
-#       19 -- ..................*.
-#       20 -- ...................*
-#       21 -- ........**..........
-#       22 -- ......**............
-#       23 -- .................**.
-#       24 -- .................***
-#       25 -- .............****...
-#       26 -- ...**...............
-#       27 -- ...*****************
-#       28 -- .............***....
-#       29 -- .............**.....
-#       30 -- ..........*******...
-#       31 -- ...*****............
-#       32 -- ...*******..........
-#       33 -- ..........**********
-#       34 -- ..******************
-#       35 -- ...***..............
-#       36 -- .*.*****************
-#       37 -- ...**.**............
-#       38 -- ..........*.*****...
-#       39 -- ...**************...
-#       40 -- ..........**........
-#       41 -- ..........*..****...
-#       42 -- ............*****...
-#       43 -- ...........******...
-#       44 -- ..........**.****...
-#       45 -- ..........*.*.......
-#       46 -- ..........***.......
-#       47 -- ...........*.****...
-#       48 -- ........************
-#       49 -- .....***............
-#       50 -- ...........**.......
-#       51 -- ...*******.......***
-#       --------------------------
-# 
-#       Summary statistics for informative taxon bipartitions
-#          (saved to file "sequences-aligned-clustalw2-mb.nexus.tstat"):
-# 
-#       ID   #obs    Probab.
-#       --------------------
-#       21   751    1.000000
-#       22   751    1.000000
-#       23   751    1.000000
-#       24   751    1.000000
-#       25   751    1.000000
-#       26   751    1.000000
-#       27   751    1.000000
-#       28   749    0.997337
-#       29   748    0.996005
-#       30   731    0.973369
-#       31   618    0.822903
-#       32   521    0.693742
-#       33   469    0.624501
-#       34   443    0.589880
-#       35   370    0.492676
-#       36   307    0.408788
-#       37   246    0.327563
-#       38   179    0.238349
-#       39   168    0.223702
-#       40   159    0.211718
-#       41   153    0.203728
-#       42   153    0.203728
-#       43   148    0.197071
-#       44   148    0.197071
-#       45   142    0.189081
-#       46   142    0.189081
-#       47   141    0.187750
-#       48   140    0.186418
-#       49   135    0.179760
-#       50   128    0.170439
-#       51   106    0.141145
-#       --------------------
-# 
-#       Summary statistics for branch and node parameters
-#          (saved to file "sequences-aligned-clustalw2-mb.nexus.vstat"):
-# 
-#                                               95% HPD Interval
-#                                             --------------------
-#       Parameter      Mean       Variance     Lower       Upper       Median
-#       ---------------------------------------------------------------------
-#       length[1]     0.006932    0.000016    0.000698    0.015378    0.006109
-#       length[2]     0.009726    0.000017    0.004208    0.018085    0.008857
-#       length[3]     0.006811    0.000012    0.000830    0.014114    0.006464
-#       length[4]     0.003257    0.000005    0.000497    0.007688    0.002819
-#       length[5]     0.001410    0.000002    0.000044    0.003892    0.000913
-#       length[6]     0.001719    0.000003    0.000039    0.005598    0.001126
-#       length[7]     0.001984    0.000005    0.000056    0.006938    0.001247
-#       length[8]     0.001853    0.000002    0.000075    0.004818    0.001372
-#       length[9]     0.005494    0.000010    0.000789    0.012150    0.004617
-#       length[10]    0.003389    0.000005    0.000287    0.007197    0.002812
-#       length[11]    0.002939    0.000004    0.000200    0.006532    0.002470
-#       length[12]    0.002954    0.000005    0.000037    0.006863    0.002376
-#       length[13]    0.001381    0.000002    0.000010    0.004443    0.000977
-#       length[14]    0.004017    0.000008    0.000801    0.011022    0.003140
-#       length[15]    0.005081    0.000008    0.001051    0.010941    0.004793
-#       length[16]    0.003571    0.000007    0.000170    0.008795    0.003055
-#       length[17]    0.003258    0.000004    0.000035    0.006954    0.002838
-#       length[18]    0.003302    0.000005    0.000417    0.007980    0.002684
-#       length[19]    0.009060    0.000014    0.002780    0.016558    0.008501
-#       length[20]    0.017553    0.000041    0.007991    0.032086    0.017065
-#       length[21]    0.006211    0.000012    0.000934    0.012881    0.005489
-#       length[22]    0.007496    0.000012    0.001514    0.013452    0.007046
-#       length[23]    0.016866    0.000037    0.006901    0.028468    0.016408
-#       length[24]    0.011094    0.000025    0.003604    0.021612    0.009921
-#       length[25]    0.003732    0.000006    0.000044    0.007953    0.003245
-#       length[26]    0.006259    0.000011    0.001099    0.012543    0.005766
-#       length[27]    0.010181    0.000015    0.002903    0.017930    0.009594
-#       length[28]    0.003541    0.000006    0.000119    0.009003    0.002773
-#       length[29]    0.003126    0.000005    0.000287    0.009430    0.002486
-#       length[30]    0.004397    0.000010    0.000027    0.010995    0.004005
-#       length[31]    0.004891    0.000013    0.000360    0.012191    0.004159
-#       length[32]    0.005055    0.000014    0.000062    0.012073    0.004648
-#       length[33]    0.004890    0.000013    0.000040    0.012661    0.003954
-#       length[34]    0.003522    0.000007    0.000238    0.009115    0.002770
-#       length[35]    0.002913    0.000006    0.000174    0.008505    0.002249
-#       length[36]    0.003579    0.000005    0.000669    0.008399    0.003119
-#       length[37]    0.002183    0.000002    0.000305    0.005454    0.002118
-#       length[38]    0.002374    0.000005    0.000018    0.006497    0.001854
-#       length[39]    0.002755    0.000005    0.000025    0.006452    0.002150
-#       length[40]    0.001459    0.000002    0.000062    0.003855    0.001082
-#       length[41]    0.002398    0.000006    0.000072    0.007781    0.001606
-#       length[42]    0.001444    0.000002    0.000060    0.004631    0.000859
-#       length[43]    0.001627    0.000003    0.000018    0.005111    0.001192
-#       length[44]    0.001658    0.000002    0.000057    0.004006    0.001208
-#       length[45]    0.001666    0.000003    0.000019    0.004865    0.000788
-#       length[46]    0.001516    0.000003    0.000018    0.004767    0.000976
-#       length[47]    0.001757    0.000003    0.000089    0.005471    0.001499
-#       length[48]    0.002908    0.000005    0.000049    0.006438    0.002757
-#       length[49]    0.001888    0.000002    0.000115    0.004227    0.001846
-#       length[50]    0.001186    0.000001    0.000055    0.002747    0.000861
-#       length[51]    0.002786    0.000005    0.000025    0.007800    0.002519
-#       ---------------------------------------------------------------------
-# 
-# 
-# 
-# 
-#       Clade credibility values:
-# 
-#       /----------------------------------------------------------- XP_002749725.2 (1)
-#       |
-#       |----------------------------------------------------------- XP_032134401.1 (2)
-#       |
-#       |      /---------------------------------------------------- XP_039325526.1 (3)
-#       |      |
-#       |      |                                            /------- PNI67080.1 (4)
-#       +      |                                    /--100--+
-#       |      |                                    |       \------- XP_008972488.1 (5)
-#       |      |                                    |
-#       |      |                             /--82--+--------------- NP_001266520.1 (6)
-#       |      |                             |      |
-#       |      |                             |      |       /------- PNJ73451.1 (7)
-#       |      |                             |      \--100--+
-#       \--59--+       /----------69---------+              \------- P0CB68.1 (8)
-#              |       |                     |
-#              |       |                     |              /------- XP_032610702.1 (9)
-#              |       |                     \------100-----+
-#              |       |                                    \------- XP_030659807.1 (10)
-#              |       |
-#              |       |              /----------------------------- Q4R6K9.1 (11)
-#              |       |              |
-#              |       |              |----------------------------- XP_025261308.1 (12)
-#              \--100--+              |
-#                      |              |----------------------------- XP_003907894.1 (13)
-#                      |              |
-#                      |      /---97--+                     /------- XP_010350948.1 (14)
-#                      |      |       |             /--100--+
-#                      |      |       |             |       \------- XP_033086464.1 (15)
-#                      |      |       |      /--100-+
-#                      |      |       |      |      \--------------- XP_011805264.1 (16)
-#                      |      |       \--100-+
-#                      \--62--+              \---------------------- XP_023075176.1 (17)
-#                             |
-#                             |                             /------- XP_015990567.2 (18)
-#                             |                     /--100--+
-#                             |                     |       \------- XP_006921444.1 (19)
-#                             \---------100---------+
-#                                                   \--------------- XP_011224853.1 (20)
-# 
-# 
-#       Phylogram (based on average branch lengths):
-# 
-#       /------- XP_002749725.2 (1)
-#       |
-#       |---------- XP_032134401.1 (2)
-#       |
-#       |  /-------- XP_039325526.1 (3)
-#       |  |
-#       |  |                           /--- PNI67080.1 (4)
-#       +  |                    /------+
-#       |  |                    |      \- XP_008972488.1 (5)
-#       |  |                    |
-#       |  |                /---+-- NP_001266520.1 (6)
-#       |  |                |   |
-#       |  |                |   |        /- PNJ73451.1 (7)
-#       |  |                |   \--------+
-#       \--+          /-----+            \- P0CB68.1 (8)
-#          |          |     |
-#          |          |     |     /----- XP_032610702.1 (9)
-#          |          |     \-----+
-#          |          |           \--- XP_030659807.1 (10)
-#          |          |
-#          |          |        /--- Q4R6K9.1 (11)
-#          |          |        |
-#          |          |        |--- XP_025261308.1 (12)
-#          \----------+        |
-#                     |        |-- XP_003907894.1 (13)
-#                     |        |
-#                     |    /---+         /---- XP_010350948.1 (14)
-#                     |    |   |      /--+
-#                     |    |   |      |  \------ XP_033086464.1 (15)
-#                     |    |   |   /--+
-#                     |    |   |   |  \---- XP_011805264.1 (16)
-#                     |    |   \---+
-#                     \----+       \--- XP_023075176.1 (17)
-#                          |
-#                          |                             /--- XP_015990567.2 (18)
-#                          |          /------------------+
-#                          |          |                  \---------- XP_006921444.1 (19)
-#                          \----------+
-#                                     \-------------------- XP_011224853.1 (20)
-# 
-#       |----------| 0.010 expected changes per site
-# 
-#       Calculating tree probabilities...
-# 
-#       Credible sets of trees (350 trees sampled):
-#          50 % credible set contains 83 trees
-#          90 % credible set contains 275 trees
-#          95 % credible set contains 313 trees
-#          99 % credible set contains 343 trees
-# 
-#    Exiting mrbayes block
-#    Reached end of file
+Executing file "sequences-aligned-clustalw2-mb.nexus"
+   DOS line termination
+   Longest line length = 761
+   Parsing file
+   Expecting NEXUS formatted file
+   Reading taxa block
+      Allocated taxon set
+      Defining new set of 20 taxa
+   Exiting taxa block
+   Reading characters block
+      Allocated matrix
+      Defining new character matrix with 741 characters
+      Missing data coded as ?
+      Gaps coded as -
+      Matching characters coded as .
+      Data is Protein
+      Taxon  1 -> XP_002749725.2
+      Taxon  2 -> XP_032134401.1
+      Taxon  3 -> XP_039325526.1
+      Taxon  4 -> PNI67080.1
+      Taxon  5 -> XP_008972488.1
+      Taxon  6 -> NP_001266520.1
+      Taxon  7 -> PNJ73451.1
+      Taxon  8 -> P0CB68.1
+      Taxon  9 -> XP_032610702.1
+      Taxon 10 -> XP_030659807.1
+      Taxon 11 -> Q4R6K9.1
+      Taxon 12 -> XP_025261308.1
+      Taxon 13 -> XP_003907894.1
+      Taxon 14 -> XP_010350948.1
+      Taxon 15 -> XP_033086464.1
+      Taxon 16 -> XP_011805264.1
+      Taxon 17 -> XP_023075176.1
+      Taxon 18 -> XP_015990567.2
+      Taxon 19 -> XP_006921444.1
+      Taxon 20 -> XP_011224853.1
+      Successfully read matrix
+      Setting default partition (does not divide up characters)
+      Setting model defaults
+      Seed (for generating default start values) = 1652144653
+      Setting output file names to "sequences-aligned-clustalw2-mb.nexus.run<i>.<p|t>"
+   Exiting characters block
+   Reading mrbayes block
+      Setting autoclose to yes
+      Setting Brlenspr to Unconstrained:Exponential(10.00)
+      Successfully set prior model parameters
+      Setting Shapepr to Exponential(1.00)
+      Successfully set prior model parameters
+      Setting Statefreqpr to Dirichlet(1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00)
+      Successfully set prior model parameters
+      Nst =1 unchanged because dataType is not DNA or RNA
+      Setting Rates to Gamma
+      Setting Ngammacat to 4
+      Successfully set likelihood model parameters
+      Setting number of generations to 10000
+      Setting sample frequency to 10
+      Setting print frequency to 100
+      WARNING: Reallocation of zero size attempted. This is probably a bug. Problems may follow.
+      WARNING: Reallocation of zero size attempted. This is probably a bug. Problems may follow.
+      Setting number of runs to 1
+      WARNING: Allocation of zero size attempted. This is probably a bug; problems may follow.
+      Setting number of chains to 3
+      Setting chain output file names to "sequences-aligned-clustalw2-mb.nexus.<p/t>"
+      Successfully set chain parameters
+      Running Markov chain
+      MCMC stamp = 2380591072
+      Seed = 444786498
+      Swapseed = 1652144653
+      Model settings:
+
+         Data not partitioned --
+            Datatype  = Protein
+            Aamodel   = Poisson
+                        Substitution rates are fixed to be equal
+            Covarion  = No
+            # States  = 20
+                        State frequencies are fixed to be equal
+            Rates     = Gamma
+                        The distribution is approximated using 4 categories.
+                        Shape parameter is exponentially
+                        distributed with parameter (1.00).
+
+      Active parameters:
+
+         Parameters
+         ---------------------
+         Statefreq           1
+         Shape               2
+         Ratemultiplier      3
+         Topology            4
+         Brlens              5
+         ---------------------
+
+         1 --  Parameter  = Pi
+               Type       = Stationary state frequencies
+               Prior      = Fixed (equal frequencies)
+
+         2 --  Parameter  = Alpha
+               Type       = Shape of scaled gamma distribution of site rates
+               Prior      = Exponential(1.00)
+
+         3 --  Parameter  = Ratemultiplier
+               Type       = Partition-specific rate multiplier
+               Prior      = Fixed(1.0)
+
+         4 --  Parameter  = Tau
+               Type       = Topology
+               Prior      = All topologies equally probable a priori
+               Subparam.  = V
+
+         5 --  Parameter  = V
+               Type       = Branch lengths
+               Prior      = Unconstrained:Exponential(10.0)
+
+
+
+      The MCMC sampler will use the following moves:
+         With prob.  Chain will use move
+            1.96 %   Multiplier(Alpha)
+            9.80 %   ExtSPR(Tau,V)
+            9.80 %   ExtTBR(Tau,V)
+            9.80 %   NNI(Tau,V)
+            9.80 %   ParsSPR(Tau,V)
+           39.22 %   Multiplier(V)
+           13.73 %   Nodeslider(V)
+            5.88 %   TLMultiplier(V)
+
+      Division 1 has 83 unique site patterns
+      Initializing conditional likelihoods
+      Using standard non-SSE likelihood calculator for division 1 (single-precision)
+
+      Initial log likelihoods and log prior probs:
+         Chain 1 -- -3447.391078 -- 29.948048
+         Chain 2 -- -3431.369724 -- 29.948048
+         Chain 3 -- -3443.422600 -- 29.948048
+
+
+      Chain results (10000 generations requested):
+
+          0 -- [-3447.391] (-3431.370) (-3443.423)
+        100 -- (-3203.378) (-3145.626) [-3071.734] -- 0:00:00
+        200 -- (-3138.762) (-3049.656) [-2998.909] -- 0:00:00
+        300 -- (-3087.826) (-3022.145) [-2934.907] -- 0:00:32
+        400 -- (-3070.174) (-2972.479) [-2926.922] -- 0:00:24
+        500 -- (-3051.897) (-2954.022) [-2918.006] -- 0:00:19
+        600 -- (-2982.448) (-2943.887) [-2915.282] -- 0:00:15
+        700 -- (-2977.358) (-2942.281) [-2911.227] -- 0:00:26
+        800 -- (-2970.503) (-2920.651) [-2897.664] -- 0:00:23
+        900 -- (-2960.689) (-2925.585) [-2904.571] -- 0:00:20
+       1000 -- (-2956.478) (-2901.239) [-2898.607] -- 0:00:18
+       1100 -- (-2943.061) (-2899.490) [-2895.676] -- 0:00:16
+       1200 -- (-2925.308) (-2900.705) [-2897.234] -- 0:00:22
+       1300 -- (-2919.181) (-2905.951) [-2892.286] -- 0:00:20
+       1400 -- (-2912.759) (-2900.041) [-2891.701] -- 0:00:18
+       1500 -- (-2901.447) (-2905.908) [-2897.899] -- 0:00:22
+       1600 -- [-2897.313] (-2909.459) (-2910.712) -- 0:00:21
+       1700 -- (-2902.809) (-2903.784) [-2897.153] -- 0:00:19
+       1800 -- [-2901.215] (-2900.149) (-2895.941) -- 0:00:22
+       1900 -- (-2901.399) [-2898.880] (-2900.476) -- 0:00:21
+       2000 -- [-2899.565] (-2903.246) (-2905.301) -- 0:00:20
+       2100 -- (-2904.187) [-2902.233] (-2908.990) -- 0:00:18
+       2200 -- (-2901.564) [-2906.997] (-2903.849) -- 0:00:21
+       2300 -- [-2900.091] (-2907.612) (-2909.340) -- 0:00:20
+       2400 -- [-2904.171] (-2913.834) (-2897.550) -- 0:00:19
+       2500 -- [-2887.359] (-2914.405) (-2898.646) -- 0:00:18
+       2600 -- (-2902.978) (-2908.095) [-2895.599] -- 0:00:19
+       2700 -- (-2912.420) [-2901.331] (-2898.169) -- 0:00:18
+       2800 -- [-2901.860] (-2903.213) (-2893.262) -- 0:00:18
+       2900 -- (-2893.927) [-2901.625] (-2921.416) -- 0:00:17
+       3000 -- (-2909.322) [-2903.930] (-2913.381) -- 0:00:18
+       3100 -- (-2911.274) (-2901.080) [-2906.888] -- 0:00:17
+       3200 -- [-2917.037] (-2897.076) (-2914.303) -- 0:00:17
+       3300 -- (-2902.127) [-2896.673] (-2903.737) -- 0:00:18
+       3400 -- [-2902.271] (-2905.703) (-2916.919) -- 0:00:17
+       3500 -- [-2891.609] (-2896.783) (-2914.372) -- 0:00:16
+       3600 -- [-2901.497] (-2907.363) (-2921.615) -- 0:00:17
+       3700 -- (-2896.501) [-2898.093] (-2904.163) -- 0:00:17
+       3800 -- (-2900.326) [-2890.092] (-2911.180) -- 0:00:17
+       3900 -- (-2900.787) [-2890.108] (-2903.201) -- 0:00:17
+       4000 -- (-2899.527) [-2896.887] (-2913.365) -- 0:00:16
+       4100 -- (-2901.410) (-2894.666) [-2895.370] -- 0:00:17
+       4200 -- (-2895.538) [-2891.738] (-2903.689) -- 0:00:16
+       4300 -- [-2896.945] (-2908.828) (-2903.852) -- 0:00:15
+       4400 -- [-2894.652] (-2906.625) (-2903.182) -- 0:00:16
+       4500 -- (-2898.890) (-2897.872) [-2897.863] -- 0:00:17
+       4600 -- [-2902.565] (-2894.465) (-2894.423) -- 0:00:16
+       4700 -- (-2929.581) [-2896.141] (-2891.066) -- 0:00:16
+       4800 -- [-2904.808] (-2894.871) (-2897.012) -- 0:00:16
+       4900 -- (-2915.900) [-2891.043] (-2901.435) -- 0:00:15
+       5000 -- (-2918.304) (-2896.252) [-2901.370] -- 0:00:16
+       5100 -- [-2899.138] (-2902.799) (-2893.520) -- 0:00:15
+       5200 -- (-2904.277) [-2895.283] (-2894.701) -- 0:00:14
+       5300 -- (-2906.372) [-2896.275] (-2906.761) -- 0:00:15
+       5400 -- (-2902.793) (-2893.753) [-2894.200] -- 0:00:14
+       5500 -- (-2911.737) [-2898.834] (-2899.710) -- 0:00:14
+       5600 -- (-2909.835) (-2900.876) [-2896.282] -- 0:00:14
+       5700 -- (-2905.703) (-2898.637) [-2897.890] -- 0:00:14
+       5800 -- (-2900.002) (-2905.043) [-2888.399] -- 0:00:13
+       5900 -- (-2905.343) (-2904.851) [-2889.113] -- 0:00:13
+       6000 -- (-2905.021) (-2904.331) [-2899.267] -- 0:00:13
+       6100 -- (-2920.486) [-2899.467] (-2900.647) -- 0:00:13
+       6200 -- [-2890.093] (-2916.948) (-2900.153) -- 0:00:12
+       6300 -- (-2916.330) (-2930.068) [-2897.102] -- 0:00:12
+       6400 -- [-2900.142] (-2902.543) (-2894.546) -- 0:00:12
+       6500 -- [-2889.366] (-2902.223) (-2909.083) -- 0:00:11
+       6600 -- (-2892.552) [-2901.636] (-2901.535) -- 0:00:11
+       6700 -- [-2899.834] (-2898.559) (-2913.702) -- 0:00:11
+       6800 -- [-2901.817] (-2907.569) (-2906.562) -- 0:00:10
+       6900 -- [-2899.297] (-2904.268) (-2898.044) -- 0:00:10
+       7000 -- (-2916.206) (-2891.895) [-2903.363] -- 0:00:10
+       7100 -- (-2909.625) [-2901.909] (-2902.906) -- 0:00:10
+       7200 -- (-2906.780) (-2919.118) [-2906.894] -- 0:00:09
+       7300 -- (-2910.976) [-2899.759] (-2902.340) -- 0:00:09
+       7400 -- (-2901.622) (-2901.039) [-2895.023] -- 0:00:08
+       7500 -- [-2900.184] (-2903.671) (-2900.410) -- 0:00:08
+       7600 -- [-2902.921] (-2895.128) (-2895.640) -- 0:00:08
+       7700 -- (-2905.771) (-2899.342) [-2891.427] -- 0:00:08
+       7800 -- (-2902.684) (-2899.594) [-2888.272] -- 0:00:07
+       7900 -- (-2893.907) [-2900.439] (-2912.304) -- 0:00:07
+       8000 -- (-2890.377) [-2904.191] (-2914.526) -- 0:00:06
+       8100 -- [-2895.925] (-2898.714) (-2899.928) -- 0:00:06
+       8200 -- (-2900.598) (-2896.014) [-2902.317] -- 0:00:06
+       8300 -- (-2894.125) (-2904.740) [-2897.937] -- 0:00:05
+       8400 -- [-2895.418] (-2897.624) (-2898.691) -- 0:00:05
+       8500 -- (-2894.493) (-2890.173) [-2895.029] -- 0:00:05
+       8600 -- (-2897.036) (-2902.854) [-2890.297] -- 0:00:04
+       8700 -- (-2892.208) (-2908.880) [-2896.010] -- 0:00:04
+       8800 -- (-2891.184) (-2912.111) [-2891.879] -- 0:00:04
+       8900 -- (-2899.961) [-2901.905] (-2892.602) -- 0:00:03
+       9000 -- [-2895.140] (-2910.247) (-2902.787) -- 0:00:03
+       9100 -- (-2895.209) [-2906.508] (-2899.977) -- 0:00:03
+       9200 -- (-2900.764) (-2903.250) [-2895.906] -- 0:00:02
+       9300 -- (-2901.886) [-2897.475] (-2899.333) -- 0:00:02
+       9400 -- (-2903.971) (-2896.277) [-2894.536] -- 0:00:02
+       9500 -- (-2902.498) [-2896.619] (-2911.116) -- 0:00:01
+       9600 -- (-2896.303) (-2907.721) [-2900.613] -- 0:00:01
+       9700 -- [-2891.318] (-2912.745) (-2896.420) -- 0:00:01
+       9800 -- (-2908.679) (-2895.056) [-2891.776] -- 0:00:00
+       9900 -- (-2897.314) [-2901.919] (-2897.424) -- 0:00:00
+      10000 -- (-2897.215) [-2892.232] (-2898.638) -- 0:00:00
+
+      Analysis completed in 36 seconds
+      Analysis used 35.70 seconds of CPU time
+      Log likelihood of best state for "cold" chain was -2883.18
+
+      Acceptance rates for the moves in the "cold" chain:
+         With prob.   (last 100)   chain accepted proposals by move
+            86.1 %     ( 93 %)     Multiplier(Alpha)
+            16.3 %     ( 23 %)     ExtSPR(Tau,V)
+            13.6 %     ( 11 %)     ExtTBR(Tau,V)
+            24.9 %     ( 24 %)     NNI(Tau,V)
+            16.2 %     ( 16 %)     ParsSPR(Tau,V)
+            76.0 %     ( 65 %)     Multiplier(V)
+            58.8 %     ( 57 %)     Nodeslider(V)
+            29.0 %     ( 33 %)     TLMultiplier(V)
+
+      Chain swap information:
+
+                 1     2     3
+           --------------------
+         1 |        0.64  0.37
+         2 |  3354        0.60
+         3 |  3343  3303
+
+      Upper diagonal: Proportion of successful state exchanges between chains
+      Lower diagonal: Number of attempted state exchanges between chains
+
+      Chain information:
+
+        ID -- Heat
+       -----------
+         1 -- 1.00  (cold chain)
+         2 -- 0.91
+         3 -- 0.83
+
+      Heat = 1 / (1 + T * (ID - 1))
+         (where T = 0.10 is the temperature and ID is the chain number)
+
+      Summarizing trees in file "sequences-aligned-clustalw2-mb.nexus.t"
+      Using relative burnin ('relburnin=yes'), discarding the first 25 % of sampled trees
+      Writing statistics to files sequences-aligned-clustalw2-mb.nexus.<parts|tstat|vstat|trprobs|con>
+      Examining file ...
+      Found one tree block in file "sequences-aligned-clustalw2-mb.nexus.t" with 1001 trees in last block
+
+      Tree reading status:
+
+      0      10      20      30      40      50      60      70      80      90     100
+      v-------v-------v-------v-------v-------v-------v-------v-------v-------v-------v
+      *********************************************************************************
+
+      Read 1001 trees from last tree block (sampling 751 of them)
+
+      General explanation:
+
+      In an unrooted tree, a taxon bipartition (split) is specified by removing a
+      branch, thereby dividing the species into those to the left and those to the
+      right of the branch. Here, taxa to one side of the removed branch are denoted
+      '.' and those to the other side are denoted '*'. Specifically, the '.' symbol
+      is used for the taxa on the same side as the outgroup.
+
+      In a rooted or clock tree, the tree is rooted using the model and not by
+      reference to an outgroup. Each bipartition therefore corresponds to a clade,
+      that is, a group that includes all the descendants of a particular branch in
+      the tree.  Taxa that are included in each clade are denoted using '*', and
+      taxa that are not included are denoted using the '.' symbol.
+
+      The output first includes a key to all the bipartitions with frequency larger
+      or equual to (Minpartfreq) in at least one run. Minpartfreq is a parameter to
+      sumt command and currently it is set to 0.10.  This is followed by a table
+      with statistics for the informative bipartitions (those including at least
+      two taxa), sorted from highest to lowest probability. For each bipartition,
+      the table gives the number of times the partition or split was observed in all
+      runs (#obs) and the posterior probability of the bipartition (Probab.), which
+      is the same as the split frequency. If several runs are summarized, this is
+      followed by the minimum split frequency (Min(s)), the maximum frequency
+      (Max(s)), and the standard deviation of frequencies (Stddev(s)) across runs.
+      The latter value should approach 0 for all bipartitions as MCMC runs converge.
+
+      This is followed by a table summarizing branch lengths, node heights (if a
+      clock model was used) and relaxed clock parameters (if a relaxed clock model
+      was used). The mean, variance, and 95 % credible interval are given for each
+      of these parameters. If several runs are summarized, the potential scale
+      reduction factor (PSRF) is also given; it should approach 1 as runs converge.
+      Node heights will take calibration points into account, if such points were
+      used in the analysis.
+
+      Note that Stddev may be unreliable if the partition is not present in all
+      runs (the last column indicates the number of runs that sampled the partition
+      if more than one run is summarized). The PSRF is not calculated at all if
+      the partition is not present in all runs.The PSRF is also sensitive to small
+      sample sizes and it should only be considered a rough guide to convergence
+      since some of the assumptions allowing one to interpret it as a true potential
+      scale reduction factor are violated in MrBayes.
+
+      List of taxa in bipartitions:
+
+         1 -- XP_002749725.2
+         2 -- XP_032134401.1
+         3 -- XP_039325526.1
+         4 -- PNI67080.1
+         5 -- XP_008972488.1
+         6 -- NP_001266520.1
+         7 -- PNJ73451.1
+         8 -- P0CB68.1
+         9 -- XP_032610702.1
+        10 -- XP_030659807.1
+        11 -- Q4R6K9.1
+        12 -- XP_025261308.1
+        13 -- XP_003907894.1
+        14 -- XP_010350948.1
+        15 -- XP_033086464.1
+        16 -- XP_011805264.1
+        17 -- XP_023075176.1
+        18 -- XP_015990567.2
+        19 -- XP_006921444.1
+        20 -- XP_011224853.1
+
+      Key to taxon bipartitions (saved to file "sequences-aligned-clustalw2-mb.nexus.parts"):
+
+      ID -- Partition
+      --------------------------
+       1 -- .*******************
+       2 -- .*..................
+       3 -- ..*.................
+       4 -- ...*................
+       5 -- ....*...............
+       6 -- .....*..............
+       7 -- ......*.............
+       8 -- .......*............
+       9 -- ........*...........
+      10 -- .........*..........
+      11 -- ..........*.........
+      12 -- ...........*........
+      13 -- ............*.......
+      14 -- .............*......
+      15 -- ..............*.....
+      16 -- ...............*....
+      17 -- ................*...
+      18 -- .................*..
+      19 -- ..................*.
+      20 -- ...................*
+      21 -- ........**..........
+      22 -- ......**............
+      23 -- .................**.
+      24 -- .................***
+      25 -- .............****...
+      26 -- ...**...............
+      27 -- ...*****************
+      28 -- .............***....
+      29 -- .............**.....
+      30 -- ..........*******...
+      31 -- ...*****............
+      32 -- ...*******..........
+      33 -- ..........**********
+      34 -- ..******************
+      35 -- ...***..............
+      36 -- .*.*****************
+      37 -- ...**.**............
+      38 -- ..........*.*****...
+      39 -- ...**************...
+      40 -- ..........**........
+      41 -- ..........*..****...
+      42 -- ............*****...
+      43 -- ...........******...
+      44 -- ..........**.****...
+      45 -- ..........*.*.......
+      46 -- ..........***.......
+      47 -- ...........*.****...
+      48 -- ........************
+      49 -- .....***............
+      50 -- ...........**.......
+      51 -- ...*******.......***
+      --------------------------
+
+      Summary statistics for informative taxon bipartitions
+         (saved to file "sequences-aligned-clustalw2-mb.nexus.tstat"):
+
+      ID   #obs    Probab.
+      --------------------
+      21   751    1.000000
+      22   751    1.000000
+      23   751    1.000000
+      24   751    1.000000
+      25   751    1.000000
+      26   751    1.000000
+      27   751    1.000000
+      28   749    0.997337
+      29   748    0.996005
+      30   731    0.973369
+      31   618    0.822903
+      32   521    0.693742
+      33   469    0.624501
+      34   443    0.589880
+      35   370    0.492676
+      36   307    0.408788
+      37   246    0.327563
+      38   179    0.238349
+      39   168    0.223702
+      40   159    0.211718
+      41   153    0.203728
+      42   153    0.203728
+      43   148    0.197071
+      44   148    0.197071
+      45   142    0.189081
+      46   142    0.189081
+      47   141    0.187750
+      48   140    0.186418
+      49   135    0.179760
+      50   128    0.170439
+      51   106    0.141145
+      --------------------
+
+      Summary statistics for branch and node parameters
+         (saved to file "sequences-aligned-clustalw2-mb.nexus.vstat"):
+
+                                              95% HPD Interval
+                                            --------------------
+      Parameter      Mean       Variance     Lower       Upper       Median
+      ---------------------------------------------------------------------
+      length[1]     0.006932    0.000016    0.000698    0.015378    0.006109
+      length[2]     0.009726    0.000017    0.004208    0.018085    0.008857
+      length[3]     0.006811    0.000012    0.000830    0.014114    0.006464
+      length[4]     0.003257    0.000005    0.000497    0.007688    0.002819
+      length[5]     0.001410    0.000002    0.000044    0.003892    0.000913
+      length[6]     0.001719    0.000003    0.000039    0.005598    0.001126
+      length[7]     0.001984    0.000005    0.000056    0.006938    0.001247
+      length[8]     0.001853    0.000002    0.000075    0.004818    0.001372
+      length[9]     0.005494    0.000010    0.000789    0.012150    0.004617
+      length[10]    0.003389    0.000005    0.000287    0.007197    0.002812
+      length[11]    0.002939    0.000004    0.000200    0.006532    0.002470
+      length[12]    0.002954    0.000005    0.000037    0.006863    0.002376
+      length[13]    0.001381    0.000002    0.000010    0.004443    0.000977
+      length[14]    0.004017    0.000008    0.000801    0.011022    0.003140
+      length[15]    0.005081    0.000008    0.001051    0.010941    0.004793
+      length[16]    0.003571    0.000007    0.000170    0.008795    0.003055
+      length[17]    0.003258    0.000004    0.000035    0.006954    0.002838
+      length[18]    0.003302    0.000005    0.000417    0.007980    0.002684
+      length[19]    0.009060    0.000014    0.002780    0.016558    0.008501
+      length[20]    0.017553    0.000041    0.007991    0.032086    0.017065
+      length[21]    0.006211    0.000012    0.000934    0.012881    0.005489
+      length[22]    0.007496    0.000012    0.001514    0.013452    0.007046
+      length[23]    0.016866    0.000037    0.006901    0.028468    0.016408
+      length[24]    0.011094    0.000025    0.003604    0.021612    0.009921
+      length[25]    0.003732    0.000006    0.000044    0.007953    0.003245
+      length[26]    0.006259    0.000011    0.001099    0.012543    0.005766
+      length[27]    0.010181    0.000015    0.002903    0.017930    0.009594
+      length[28]    0.003541    0.000006    0.000119    0.009003    0.002773
+      length[29]    0.003126    0.000005    0.000287    0.009430    0.002486
+      length[30]    0.004397    0.000010    0.000027    0.010995    0.004005
+      length[31]    0.004891    0.000013    0.000360    0.012191    0.004159
+      length[32]    0.005055    0.000014    0.000062    0.012073    0.004648
+      length[33]    0.004890    0.000013    0.000040    0.012661    0.003954
+      length[34]    0.003522    0.000007    0.000238    0.009115    0.002770
+      length[35]    0.002913    0.000006    0.000174    0.008505    0.002249
+      length[36]    0.003579    0.000005    0.000669    0.008399    0.003119
+      length[37]    0.002183    0.000002    0.000305    0.005454    0.002118
+      length[38]    0.002374    0.000005    0.000018    0.006497    0.001854
+      length[39]    0.002755    0.000005    0.000025    0.006452    0.002150
+      length[40]    0.001459    0.000002    0.000062    0.003855    0.001082
+      length[41]    0.002398    0.000006    0.000072    0.007781    0.001606
+      length[42]    0.001444    0.000002    0.000060    0.004631    0.000859
+      length[43]    0.001627    0.000003    0.000018    0.005111    0.001192
+      length[44]    0.001658    0.000002    0.000057    0.004006    0.001208
+      length[45]    0.001666    0.000003    0.000019    0.004865    0.000788
+      length[46]    0.001516    0.000003    0.000018    0.004767    0.000976
+      length[47]    0.001757    0.000003    0.000089    0.005471    0.001499
+      length[48]    0.002908    0.000005    0.000049    0.006438    0.002757
+      length[49]    0.001888    0.000002    0.000115    0.004227    0.001846
+      length[50]    0.001186    0.000001    0.000055    0.002747    0.000861
+      length[51]    0.002786    0.000005    0.000025    0.007800    0.002519
+      ---------------------------------------------------------------------
+
+
+
+
+      Clade credibility values:
+
+      /----------------------------------------------------------- XP_002749725.2 (1)
+      |
+      |----------------------------------------------------------- XP_032134401.1 (2)
+      |
+      |      /---------------------------------------------------- XP_039325526.1 (3)
+      |      |
+      |      |                                            /------- PNI67080.1 (4)
+      +      |                                    /--100--+
+      |      |                                    |       \------- XP_008972488.1 (5)
+      |      |                                    |
+      |      |                             /--82--+--------------- NP_001266520.1 (6)
+      |      |                             |      |
+      |      |                             |      |       /------- PNJ73451.1 (7)
+      |      |                             |      \--100--+
+      \--59--+       /----------69---------+              \------- P0CB68.1 (8)
+             |       |                     |
+             |       |                     |              /------- XP_032610702.1 (9)
+             |       |                     \------100-----+
+             |       |                                    \------- XP_030659807.1 (10)
+             |       |
+             |       |              /----------------------------- Q4R6K9.1 (11)
+             |       |              |
+             |       |              |----------------------------- XP_025261308.1 (12)
+             \--100--+              |
+                     |              |----------------------------- XP_003907894.1 (13)
+                     |              |
+                     |      /---97--+                     /------- XP_010350948.1 (14)
+                     |      |       |             /--100--+
+                     |      |       |             |       \------- XP_033086464.1 (15)
+                     |      |       |      /--100-+
+                     |      |       |      |      \--------------- XP_011805264.1 (16)
+                     |      |       \--100-+
+                     \--62--+              \---------------------- XP_023075176.1 (17)
+                            |
+                            |                             /------- XP_015990567.2 (18)
+                            |                     /--100--+
+                            |                     |       \------- XP_006921444.1 (19)
+                            \---------100---------+
+                                                  \--------------- XP_011224853.1 (20)
+
+
+      Phylogram (based on average branch lengths):
+
+      /------- XP_002749725.2 (1)
+      |
+      |---------- XP_032134401.1 (2)
+      |
+      |  /-------- XP_039325526.1 (3)
+      |  |
+      |  |                           /--- PNI67080.1 (4)
+      +  |                    /------+
+      |  |                    |      \- XP_008972488.1 (5)
+      |  |                    |
+      |  |                /---+-- NP_001266520.1 (6)
+      |  |                |   |
+      |  |                |   |        /- PNJ73451.1 (7)
+      |  |                |   \--------+
+      \--+          /-----+            \- P0CB68.1 (8)
+         |          |     |
+         |          |     |     /----- XP_032610702.1 (9)
+         |          |     \-----+
+         |          |           \--- XP_030659807.1 (10)
+         |          |
+         |          |        /--- Q4R6K9.1 (11)
+         |          |        |
+         |          |        |--- XP_025261308.1 (12)
+         \----------+        |
+                    |        |-- XP_003907894.1 (13)
+                    |        |
+                    |    /---+         /---- XP_010350948.1 (14)
+                    |    |   |      /--+
+                    |    |   |      |  \------ XP_033086464.1 (15)
+                    |    |   |   /--+
+                    |    |   |   |  \---- XP_011805264.1 (16)
+                    |    |   \---+
+                    \----+       \--- XP_023075176.1 (17)
+                         |
+                         |                             /--- XP_015990567.2 (18)
+                         |          /------------------+
+                         |          |                  \---------- XP_006921444.1 (19)
+                         \----------+
+                                    \-------------------- XP_011224853.1 (20)
+
+      |----------| 0.010 expected changes per site
+
+      Calculating tree probabilities...
+
+      Credible sets of trees (350 trees sampled):
+         50 % credible set contains 83 trees
+         90 % credible set contains 275 trees
+         95 % credible set contains 313 trees
+         99 % credible set contains 343 trees
+
+   Exiting mrbayes block
+   Reached end of file
 
 mb sequences-aligned-MUSCLE-mb.nexus
 
-# Executing file "sequences-aligned-MUSCLE-mb.nexus"
-#    DOS line termination
-#    Longest line length = 801
-#    Parsing file
-#    Expecting NEXUS formatted file
-#    Reading taxa block
-#       Allocated taxon set
-#       Defining new set of 20 taxa
-#       Expecting '<name> or <number>'
-#       Instead found ':' in command 'Taxlabels'
-#       The error occurred when reading char. 30-30 on line 15
-#          in the file 'sequences-aligned-MUSCLE-mb.nexus'
-# 
-#    Returning execution to command line ...
-# 
-#    Error in command "Execute"
-# 
-# MrBayes > execute sequences-aligned-MUSCLE-mb.nexus
-# 
-#    Executing file "sequences-aligned-MUSCLE-mb.nexus"
-#    DOS line termination
-#    Longest line length = 793
-#    Parsing file
-#    Expecting NEXUS formatted file
-#    Deleting previously defined taxa
-#    Reading taxa block
-#       Allocated taxon set
-#       Defining new set of 20 taxa
-#    Exiting taxa block
-#    Reading characters block
-#       Allocated matrix
-#       Defining new character matrix with 741 characters
-#       Missing data coded as ?
-#       Gaps coded as -
-#       Matching characters coded as .
-#       Data is Protein
-#       Taxon  1 -> XP_025261308.1_Theropithecus_gelada
-#       Taxon  2 -> XP_032134401.1_Sapajus_apella
-#       Taxon  3 -> XP_015990567.2_Rousettus_aegyptiacus
-#       Taxon  4 -> PNI67080.1_Pan_troglodytes
-#       Taxon  5 -> XP_011224853.1_Ailuropoda_melanoleuca
-#       Taxon  6 -> XP_033086464.1_Trachypithecus_francoisi
-#       Taxon  7 -> PNJ73451.1_Pongo_abelii
-#       Taxon  8 -> XP_011805264.1_Colobus_angolensis_palliatus
-#       Taxon  9 -> XP_023075176.1_Piliocolobus_tephrosceles
-#       Taxon 10 -> P0CB68.1_Pongo_pygmaeus
-#       Taxon 11 -> XP_030659807.1_Nomascus_leucogenys
-#       Taxon 12 -> NP_001266520.1_Gorilla_gorilla
-#       Taxon 13 -> XP_032610702.1_Hylobates_moloch
-#       Taxon 14 -> XP_002749725.2_Callithrix_jacchus
-#       Taxon 15 -> XP_008972488.1_Pan_paniscus
-#       Taxon 16 -> XP_003907894.1_Papio_anubis
-#       Taxon 17 -> XP_006921444.1_Pteropus_alecto
-#       Taxon 18 -> XP_039325526.1_Saimiri_boliviensis_boliviensis
-#       Taxon 19 -> XP_010350948.1_Rhinopithecus_roxellana
-#       Taxon 20 -> Q4R6K9.1_Macaca_fascicularis
-#       Successfully read matrix
-#       Setting default partition (does not divide up characters)
-#       Setting model defaults
-#       Seed (for generating default start values) = 1652145503
-#       Setting output file names to "sequences-aligned-MUSCLE-mb.nexus.run<i>.<p|t>"
-#    Exiting characters block
-#    Reading mrbayes block
-#       Setting autoclose to yes
-#       Setting Brlenspr to Unconstrained:Exponential(10.00)
-#       Successfully set prior model parameters
-#       Setting Shapepr to Exponential(1.00)
-#       Successfully set prior model parameters
-#       Setting Statefreqpr to Dirichlet(1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00)
-#       Successfully set prior model parameters
-#       Nst =1 unchanged because dataType is not DNA or RNA
-#       Setting Rates to Gamma
-#       Setting Ngammacat to 4
-#       Successfully set likelihood model parameters
-#       Setting number of generations to 10000
-#       Setting sample frequency to 10
-#       Setting print frequency to 100
-#       WARNING: Reallocation of zero size attempted. This is probably a bug. Problems may follow.
-#       WARNING: Reallocation of zero size attempted. This is probably a bug. Problems may follow.
-#       Setting number of runs to 1
-#       WARNING: Allocation of zero size attempted. This is probably a bug; problems may follow.
-#       Setting number of chains to 3
-#       Setting chain output file names to "sequences-aligned-MUSCLE-mb.nexus.<p/t>"
-#       Successfully set chain parameters
-#       Running Markov chain
-#       MCMC stamp = 3119401117
-#       Seed = 2003151243
-#       Swapseed = 1652145503
-#       Model settings:
-# 
-#          Data not partitioned --
-#             Datatype  = Protein
-#             Aamodel   = Poisson
-#                         Substitution rates are fixed to be equal
-#             Covarion  = No
-#             # States  = 20
-#                         State frequencies are fixed to be equal
-#             Rates     = Gamma
-#                         The distribution is approximated using 4 categories.
-#                         Shape parameter is exponentially
-#                         distributed with parameter (1.00).
-# 
-#       Active parameters:
-# 
-#          Parameters
-#          ---------------------
-#          Statefreq           1
-#          Shape               2
-#          Ratemultiplier      3
-#          Topology            4
-#          Brlens              5
-#          ---------------------
-# 
-#          1 --  Parameter  = Pi
-#                Type       = Stationary state frequencies
-#                Prior      = Fixed (equal frequencies)
-# 
-#          2 --  Parameter  = Alpha
-#                Type       = Shape of scaled gamma distribution of site rates
-#                Prior      = Exponential(1.00)
-# 
-#          3 --  Parameter  = Ratemultiplier
-#                Type       = Partition-specific rate multiplier
-#                Prior      = Fixed(1.0)
-# 
-#          4 --  Parameter  = Tau
-#                Type       = Topology
-#                Prior      = All topologies equally probable a priori
-#                Subparam.  = V
-# 
-#          5 --  Parameter  = V
-#                Type       = Branch lengths
-#                Prior      = Unconstrained:Exponential(10.0)
-# 
-# 
-# 
-#       The MCMC sampler will use the following moves:
-#          With prob.  Chain will use move
-#             1.96 %   Multiplier(Alpha)
-#             9.80 %   ExtSPR(Tau,V)
-#             9.80 %   ExtTBR(Tau,V)
-#             9.80 %   NNI(Tau,V)
-#             9.80 %   ParsSPR(Tau,V)
-#            39.22 %   Multiplier(V)
-#            13.73 %   Nodeslider(V)
-#             5.88 %   TLMultiplier(V)
-# 
-#       Division 1 has 84 unique site patterns
-#       Initializing conditional likelihoods
-#       Using standard non-SSE likelihood calculator for division 1 (single-precision)
-# 
-#       Initial log likelihoods and log prior probs:
-#          Chain 1 -- -3432.143405 -- 29.948048
-#          Chain 2 -- -3464.030252 -- 29.948048
-#          Chain 3 -- -3431.735416 -- 29.948048
-# 
-# 
-#       Chain results (10000 generations requested):
-# 
-#           0 -- [-3432.143] (-3464.030) (-3431.735)
-#         100 -- (-3193.345) (-3258.342) [-3121.840] -- 0:00:00
-#         200 -- (-3003.037) [-3004.716] (-3039.415) -- 0:00:00
-#         300 -- (-2992.362) [-2958.022] (-3001.248) -- 0:00:00
-#         400 -- (-2969.065) [-2936.972] (-2992.428) -- 0:00:24
-#         500 -- [-2932.930] (-2938.098) (-2935.835) -- 0:00:19
-#         600 -- (-2923.523) (-2942.777) [-2921.416] -- 0:00:15
-#         700 -- (-2914.294) (-2936.620) [-2900.912] -- 0:00:13
-#         800 -- (-2911.886) (-2918.463) [-2885.915] -- 0:00:11
-#         900 -- (-2907.886) (-2921.460) [-2878.418] -- 0:00:20
-#        1000 -- (-2909.551) (-2914.779) [-2881.344] -- 0:00:18
-#        1100 -- (-2912.057) (-2926.157) [-2889.929] -- 0:00:16
-#        1200 -- (-2909.493) (-2917.633) [-2878.693] -- 0:00:14
-#        1300 -- (-2915.499) (-2904.636) [-2884.133] -- 0:00:20
-#        1400 -- (-2911.178) (-2905.072) [-2884.603] -- 0:00:18
-#        1500 -- (-2916.308) (-2914.867) [-2884.100] -- 0:00:17
-#        1600 -- (-2913.819) (-2900.082) [-2874.119] -- 0:00:21
-#        1700 -- (-2913.307) (-2895.697) [-2874.850] -- 0:00:19
-#        1800 -- (-2901.077) [-2888.193] (-2877.086) -- 0:00:18
-#        1900 -- (-2899.945) (-2901.383) [-2884.155] -- 0:00:21
-#        2000 -- (-2897.171) [-2889.408] (-2887.931) -- 0:00:20
-#        2100 -- (-2892.890) [-2884.997] (-2884.818) -- 0:00:18
-#        2200 -- (-2905.422) (-2889.033) [-2878.183] -- 0:00:21
-#        2300 -- (-2910.103) (-2893.128) [-2874.843] -- 0:00:20
-#        2400 -- (-2897.358) (-2887.226) [-2875.983] -- 0:00:22
-#        2500 -- (-2895.601) [-2881.051] (-2885.880) -- 0:00:21
-#        2600 -- (-2902.954) [-2882.194] (-2882.380) -- 0:00:19
-#        2700 -- (-2880.496) (-2891.924) [-2878.149] -- 0:00:21
-#        2800 -- [-2884.532] (-2895.072) (-2889.099) -- 0:00:20
-#        2900 -- (-2888.468) [-2892.703] (-2894.697) -- 0:00:19
-#        3000 -- (-2898.068) [-2888.765] (-2892.219) -- 0:00:21
-#        3100 -- (-2902.110) (-2886.138) [-2892.126] -- 0:00:20
-#        3200 -- (-2893.029) [-2885.646] (-2896.767) -- 0:00:19
-#        3300 -- [-2892.700] (-2883.930) (-2875.576) -- 0:00:20
-#        3400 -- (-2898.409) (-2881.660) [-2876.863] -- 0:00:19
-#        3500 -- [-2889.832] (-2885.762) (-2888.726) -- 0:00:18
-#        3600 -- [-2893.856] (-2879.822) (-2908.392) -- 0:00:17
-#        3700 -- (-2885.340) (-2882.515) [-2890.120] -- 0:00:18
-#        3800 -- (-2879.563) [-2884.130] (-2898.235) -- 0:00:17
-#        3900 -- (-2875.233) (-2887.805) [-2890.179] -- 0:00:17
-#        4000 -- [-2878.675] (-2877.424) (-2880.445) -- 0:00:16
-#        4100 -- (-2877.581) (-2884.105) [-2877.978] -- 0:00:17
-#        4200 -- [-2876.824] (-2886.133) (-2899.011) -- 0:00:16
-#        4300 -- (-2882.421) (-2880.133) [-2884.285] -- 0:00:15
-#        4400 -- [-2885.440] (-2887.278) (-2899.570) -- 0:00:16
-#        4500 -- (-2895.229) (-2894.008) [-2889.290] -- 0:00:15
-#        4600 -- (-2886.777) [-2886.249] (-2879.659) -- 0:00:15
-#        4700 -- (-2889.084) (-2881.424) [-2883.523] -- 0:00:15
-#        4800 -- (-2891.862) [-2887.741] (-2892.950) -- 0:00:15
-#        4900 -- [-2892.134] (-2895.538) (-2890.222) -- 0:00:14
-#        5000 -- (-2901.568) (-2885.453) [-2894.448] -- 0:00:15
-#        5100 -- (-2907.681) [-2879.999] (-2881.881) -- 0:00:14
-#        5200 -- [-2901.842] (-2883.148) (-2887.013) -- 0:00:13
-#        5300 -- (-2890.461) [-2882.175] (-2891.156) -- 0:00:14
-#        5400 -- (-2895.424) (-2882.365) [-2880.272] -- 0:00:13
-#        5500 -- [-2882.909] (-2884.699) (-2884.447) -- 0:00:13
-#        5600 -- [-2885.047] (-2892.779) (-2883.220) -- 0:00:13
-#        5700 -- (-2886.822) (-2893.890) [-2885.505] -- 0:00:13
-#        5800 -- (-2886.742) (-2886.434) [-2885.083] -- 0:00:13
-#        5900 -- (-2902.436) (-2875.022) [-2880.853] -- 0:00:13
-#        6000 -- (-2886.387) (-2889.658) [-2884.135] -- 0:00:12
-#        6100 -- (-2883.457) (-2898.769) [-2875.707] -- 0:00:12
-#        6200 -- (-2882.099) (-2882.437) [-2876.176] -- 0:00:11
-#        6300 -- (-2883.635) [-2876.285] (-2875.392) -- 0:00:11
-#        6400 -- [-2884.788] (-2895.516) (-2884.020) -- 0:00:11
-#        6500 -- [-2881.170] (-2901.060) (-2890.883) -- 0:00:10
-#        6600 -- [-2876.976] (-2890.993) (-2883.975) -- 0:00:10
-#        6700 -- [-2881.064] (-2886.616) (-2886.840) -- 0:00:10
-#        6800 -- (-2883.720) (-2901.944) [-2872.753] -- 0:00:09
-#        6900 -- [-2884.399] (-2899.683) (-2892.097) -- 0:00:09
-#        7000 -- (-2887.606) (-2896.619) [-2886.683] -- 0:00:09
-#        7100 -- (-2897.638) (-2885.780) [-2890.101] -- 0:00:08
-#        7200 -- (-2890.881) [-2880.184] (-2907.962) -- 0:00:08
-#        7300 -- (-2889.410) [-2882.573] (-2894.803) -- 0:00:08
-#        7400 -- (-2884.470) [-2897.780] (-2899.357) -- 0:00:08
-#        7500 -- (-2891.094) (-2893.398) [-2877.057] -- 0:00:07
-#        7600 -- (-2888.455) [-2877.560] (-2884.618) -- 0:00:07
-#        7700 -- (-2882.999) [-2879.020] (-2892.912) -- 0:00:07
-#        7800 -- (-2897.085) (-2884.153) [-2885.069] -- 0:00:07
-#        7900 -- (-2873.771) [-2880.821] (-2893.680) -- 0:00:06
-#        8000 -- (-2873.076) [-2882.483] (-2891.433) -- 0:00:06
-#        8100 -- [-2883.308] (-2885.228) (-2886.165) -- 0:00:06
-#        8200 -- (-2887.893) [-2882.551] (-2889.288) -- 0:00:05
-#        8300 -- (-2890.073) [-2882.106] (-2898.918) -- 0:00:05
-#        8400 -- (-2883.916) [-2880.618] (-2886.179) -- 0:00:05
-#        8500 -- (-2895.453) [-2883.034] (-2892.880) -- 0:00:04
-#        8600 -- [-2884.080] (-2878.867) (-2897.989) -- 0:00:04
-#        8700 -- (-2900.985) (-2877.941) [-2889.356] -- 0:00:04
-#        8800 -- (-2897.797) [-2884.474] (-2885.924) -- 0:00:03
-#        8900 -- (-2885.074) (-2878.382) [-2879.535] -- 0:00:03
-#        9000 -- (-2881.448) (-2880.018) [-2882.276] -- 0:00:03
-#        9100 -- (-2884.996) [-2885.806] (-2888.279) -- 0:00:02
-#        9200 -- (-2893.923) [-2890.353] (-2885.691) -- 0:00:02
-#        9300 -- (-2886.020) [-2883.672] (-2893.984) -- 0:00:02
-#        9400 -- (-2890.000) (-2905.413) [-2877.139] -- 0:00:01
-#        9500 -- [-2890.736] (-2900.929) (-2891.920) -- 0:00:01
-#        9600 -- (-2889.298) (-2894.649) [-2884.731] -- 0:00:01
-#        9700 -- (-2894.943) [-2885.505] (-2874.587) -- 0:00:00
-#        9800 -- (-2883.527) (-2883.763) [-2879.391] -- 0:00:00
-#        9900 -- (-2890.487) (-2890.472) [-2883.704] -- 0:00:00
-#       10000 -- (-2888.698) [-2887.366] (-2891.747) -- 0:00:00
-# 
-#       Analysis completed in 32 seconds
-#       Analysis used 32.09 seconds of CPU time
-#       Log likelihood of best state for "cold" chain was -2871.49
-# 
-#       Acceptance rates for the moves in the "cold" chain:
-#          With prob.   (last 100)   chain accepted proposals by move
-#             85.1 %     ( 81 %)     Multiplier(Alpha)
-#             16.4 %     ( 15 %)     ExtSPR(Tau,V)
-#             15.4 %     ( 13 %)     ExtTBR(Tau,V)
-#             26.5 %     ( 30 %)     NNI(Tau,V)
-#             18.0 %     ( 16 %)     ParsSPR(Tau,V)
-#             77.1 %     ( 79 %)     Multiplier(V)
-#             61.7 %     ( 57 %)     Nodeslider(V)
-#             26.8 %     ( 26 %)     TLMultiplier(V)
-# 
-#       Chain swap information:
-# 
-#                  1     2     3
-#            --------------------
-#          1 |        0.61  0.37
-#          2 |  3393        0.68
-#          3 |  3320  3287
-# 
-#       Upper diagonal: Proportion of successful state exchanges between chains
-#       Lower diagonal: Number of attempted state exchanges between chains
-# 
-#       Chain information:
-# 
-#         ID -- Heat
-#        -----------
-#          1 -- 1.00  (cold chain)
-#          2 -- 0.91
-#          3 -- 0.83
-# 
-#       Heat = 1 / (1 + T * (ID - 1))
-#          (where T = 0.10 is the temperature and ID is the chain number)
-# 
-#       Summarizing trees in file "sequences-aligned-MUSCLE-mb.nexus.t"
-#       Using relative burnin ('relburnin=yes'), discarding the first 25 % of sampled trees
-#       Writing statistics to files sequences-aligned-MUSCLE-mb.nexus.<parts|tstat|vstat|trprobs|con>
-#       Examining file ...
-#       Found one tree block in file "sequences-aligned-MUSCLE-mb.nexus.t" with 1001 trees in last block
-# 
-#       Tree reading status:
-# 
-#       0      10      20      30      40      50      60      70      80      90     100
-#       v-------v-------v-------v-------v-------v-------v-------v-------v-------v-------v
-#       *********************************************************************************
-# 
-#       Read 1001 trees from last tree block (sampling 751 of them)
-# 
-#       General explanation:
-# 
-#       In an unrooted tree, a taxon bipartition (split) is specified by removing a
-#       branch, thereby dividing the species into those to the left and those to the
-#       right of the branch. Here, taxa to one side of the removed branch are denoted
-#       '.' and those to the other side are denoted '*'. Specifically, the '.' symbol
-#       is used for the taxa on the same side as the outgroup.
-# 
-#       In a rooted or clock tree, the tree is rooted using the model and not by
-#       reference to an outgroup. Each bipartition therefore corresponds to a clade,
-#       that is, a group that includes all the descendants of a particular branch in
-#       the tree.  Taxa that are included in each clade are denoted using '*', and
-#       taxa that are not included are denoted using the '.' symbol.
-# 
-#       The output first includes a key to all the bipartitions with frequency larger
-#       or equual to (Minpartfreq) in at least one run. Minpartfreq is a parameter to
-#       sumt command and currently it is set to 0.10.  This is followed by a table
-#       with statistics for the informative bipartitions (those including at least
-#       two taxa), sorted from highest to lowest probability. For each bipartition,
-#       the table gives the number of times the partition or split was observed in all
-#       runs (#obs) and the posterior probability of the bipartition (Probab.), which
-#       is the same as the split frequency. If several runs are summarized, this is
-#       followed by the minimum split frequency (Min(s)), the maximum frequency
-#       (Max(s)), and the standard deviation of frequencies (Stddev(s)) across runs.
-#       The latter value should approach 0 for all bipartitions as MCMC runs converge.
-# 
-#       This is followed by a table summarizing branch lengths, node heights (if a
-#       clock model was used) and relaxed clock parameters (if a relaxed clock model
-#       was used). The mean, variance, and 95 % credible interval are given for each
-#       of these parameters. If several runs are summarized, the potential scale
-#       reduction factor (PSRF) is also given; it should approach 1 as runs converge.
-#       Node heights will take calibration points into account, if such points were
-#       used in the analysis.
-# 
-#       Note that Stddev may be unreliable if the partition is not present in all
-#       runs (the last column indicates the number of runs that sampled the partition
-#       if more than one run is summarized). The PSRF is not calculated at all if
-#       the partition is not present in all runs.The PSRF is also sensitive to small
-#       sample sizes and it should only be considered a rough guide to convergence
-#       since some of the assumptions allowing one to interpret it as a true potential
-#       scale reduction factor are violated in MrBayes.
-# 
-#       List of taxa in bipartitions:
-# 
-#          1 -- XP_025261308.1_Theropithecus_gelada
-#          2 -- XP_032134401.1_Sapajus_apella
-#          3 -- XP_015990567.2_Rousettus_aegyptiacus
-#          4 -- PNI67080.1_Pan_troglodytes
-#          5 -- XP_011224853.1_Ailuropoda_melanoleuca
-#          6 -- XP_033086464.1_Trachypithecus_francoisi
-#          7 -- PNJ73451.1_Pongo_abelii
-#          8 -- XP_011805264.1_Colobus_angolensis_palliatus
-#          9 -- XP_023075176.1_Piliocolobus_tephrosceles
-#         10 -- P0CB68.1_Pongo_pygmaeus
-#         11 -- XP_030659807.1_Nomascus_leucogenys
-#         12 -- NP_001266520.1_Gorilla_gorilla
-#         13 -- XP_032610702.1_Hylobates_moloch
-#         14 -- XP_002749725.2_Callithrix_jacchus
-#         15 -- XP_008972488.1_Pan_paniscus
-#         16 -- XP_003907894.1_Papio_anubis
-#         17 -- XP_006921444.1_Pteropus_alecto
-#         18 -- XP_039325526.1_Saimiri_boliviensis_boliviensis
-#         19 -- XP_010350948.1_Rhinopithecus_roxellana
-#         20 -- Q4R6K9.1_Macaca_fascicularis
-# 
-#       Key to taxon bipartitions (saved to file "sequences-aligned-MUSCLE-mb.nexus.parts"):
-# 
-#       ID -- Partition
-#       --------------------------
-#        1 -- .*******************
-#        2 -- .*..................
-#        3 -- ..*.................
-#        4 -- ...*................
-#        5 -- ....*...............
-#        6 -- .....*..............
-#        7 -- ......*.............
-#        8 -- .......*............
-#        9 -- ........*...........
-#       10 -- .........*..........
-#       11 -- ..........*.........
-#       12 -- ...........*........
-#       13 -- ............*.......
-#       14 -- .............*......
-#       15 -- ..............*.....
-#       16 -- ...............*....
-#       17 -- ................*...
-#       18 -- .................*..
-#       19 -- ..................*.
-#       20 -- ...................*
-#       21 -- ......*..*..........
-#       22 -- .....*.**.........*.
-#       23 -- ..........*.*.......
-#       24 -- .....*.*..........*.
-#       25 -- ...*..........*.....
-#       26 -- ..*.............*...
-#       27 -- .*...........*...*..
-#       28 -- ..*.*...........*...
-#       29 -- .....*............*.
-#       30 -- .****.*..******.**..
-#       31 -- ...*.......*..*.....
-#       32 -- .*.*..*..******..*..
-#       33 -- ...*..*..*.*..*.....
-#       34 -- ...*..*..****.*.....
-#       35 -- .*...........*......
-#       36 -- .............*...*..
-#       37 -- .****.*..******.**.*
-#       38 -- .****.*..*********..
-#       39 -- .....*.**......*..**
-#       40 -- .****.*..*********.*
-#       41 -- .....*.**.........**
-#       42 -- ...*..*..*....*.....
-#       43 -- .....*.**......*..*.
-#       44 -- ...............*...*
-#       45 -- .**.*........*..**..
-#       46 -- .*.*..*..*.*.**..*..
-#       47 -- .**************.****
-#       48 -- .******************.
-#       49 -- ...*......***.*.....
-#       50 -- .**************.***.
-#       51 -- .*........*.**...*..
-#       52 -- ..***.*..****.*.*...
-#       53 -- ......*..*.*........
-#       --------------------------
-# 
-#       Summary statistics for informative taxon bipartitions
-#          (saved to file "sequences-aligned-MUSCLE-mb.nexus.tstat"):
-# 
-#       ID   #obs    Probab.
-#       --------------------
-#       21   751    1.000000
-#       22   751    1.000000
-#       23   751    1.000000
-#       24   751    1.000000
-#       25   751    1.000000
-#       26   751    1.000000
-#       27   751    1.000000
-#       28   751    1.000000
-#       29   738    0.982690
-#       30   730    0.972037
-#       31   520    0.692410
-#       32   502    0.668442
-#       33   480    0.639148
-#       34   433    0.576565
-#       35   378    0.503329
-#       36   370    0.492676
-#       37   183    0.243675
-#       38   174    0.231691
-#       39   167    0.222370
-#       40   162    0.215712
-#       41   154    0.205060
-#       42   148    0.197071
-#       43   148    0.197071
-#       44   148    0.197071
-#       45   147    0.195739
-#       46   130    0.173103
-#       47   121    0.161119
-#       48   119    0.158455
-#       49   111    0.147803
-#       50    98    0.130493
-#       51    91    0.121172
-#       52    89    0.118509
-#       53    77    0.102530
-#       --------------------
-# 
-#       Summary statistics for branch and node parameters
-#          (saved to file "sequences-aligned-MUSCLE-mb.nexus.vstat"):
-# 
-#                                               95% HPD Interval
-#                                             --------------------
-#       Parameter      Mean       Variance     Lower       Upper       Median
-#       ---------------------------------------------------------------------
-#       length[1]     0.004294    0.000008    0.000296    0.010287    0.003530
-#       length[2]     0.009473    0.000015    0.003447    0.017463    0.009035
-#       length[3]     0.004083    0.000011    0.000058    0.010089    0.003116
-#       length[4]     0.003449    0.000004    0.000384    0.007043    0.003070
-#       length[5]     0.017019    0.000042    0.007554    0.031530    0.015809
-#       length[6]     0.004676    0.000006    0.001051    0.009650    0.004387
-#       length[7]     0.001573    0.000002    0.000002    0.004162    0.001216
-#       length[8]     0.003981    0.000007    0.000142    0.009309    0.003389
-#       length[9]     0.003150    0.000005    0.000330    0.007947    0.002605
-#       length[10]    0.001764    0.000003    0.000003    0.004800    0.001401
-#       length[11]    0.002750    0.000004    0.000421    0.006513    0.002174
-#       length[12]    0.001918    0.000003    0.000065    0.005682    0.001419
-#       length[13]    0.004445    0.000009    0.000282    0.009556    0.003957
-#       length[14]    0.006091    0.000013    0.001037    0.012498    0.005211
-#       length[15]    0.002262    0.000004    0.000008    0.007065    0.001779
-#       length[16]    0.002147    0.000002    0.000050    0.004905    0.001859
-#       length[17]    0.009356    0.000015    0.003333    0.016365    0.008921
-#       length[18]    0.005304    0.000012    0.000644    0.012032    0.004722
-#       length[19]    0.002863    0.000004    0.000489    0.006687    0.002417
-#       length[20]    0.003136    0.000004    0.000166    0.006617    0.002839
-#       length[21]    0.006446    0.000011    0.001119    0.013196    0.005971
-#       length[22]    0.003587    0.000006    0.000517    0.008515    0.002997
-#       length[23]    0.004475    0.000005    0.000821    0.008823    0.004314
-#       length[24]    0.003679    0.000006    0.000228    0.008248    0.003048
-#       length[25]    0.005244    0.000010    0.000599    0.010422    0.004645
-#       length[26]    0.016042    0.000030    0.006119    0.026545    0.015647
-#       length[27]    0.010937    0.000023    0.004074    0.020566    0.010250
-#       length[28]    0.012318    0.000025    0.004411    0.022970    0.011404
-#       length[29]    0.002819    0.000004    0.000113    0.007175    0.002436
-#       length[30]    0.004252    0.000008    0.000597    0.009744    0.003590
-#       length[31]    0.002698    0.000004    0.000073    0.006260    0.002420
-#       length[32]    0.004153    0.000011    0.000167    0.010872    0.003694
-#       length[33]    0.003520    0.000007    0.000241    0.009737    0.002810
-#       length[34]    0.003185    0.000007    0.000030    0.007494    0.002503
-#       length[35]    0.003613    0.000006    0.000076    0.007292    0.003091
-#       length[36]    0.003426    0.000005    0.000060    0.008059    0.003044
-#       length[37]    0.001957    0.000003    0.000009    0.005219    0.001531
-#       length[38]    0.001954    0.000003    0.000051    0.004611    0.001436
-#       length[39]    0.002208    0.000006    0.000012    0.007370    0.001262
-#       length[40]    0.002244    0.000007    0.000016    0.009140    0.001290
-#       length[41]    0.001605    0.000003    0.000055    0.004710    0.001065
-#       length[42]    0.002902    0.000006    0.000074    0.006775    0.002261
-#       length[43]    0.001917    0.000003    0.000074    0.005307    0.001412
-#       length[44]    0.001670    0.000003    0.000091    0.005096    0.001173
-#       length[45]    0.002586    0.000006    0.000325    0.009570    0.001401
-#       length[46]    0.001295    0.000001    0.000007    0.003373    0.000859
-#       length[47]    0.001685    0.000002    0.000059    0.004162    0.001276
-#       length[48]    0.001789    0.000003    0.000102    0.004055    0.001371
-#       length[49]    0.001484    0.000002    0.000025    0.003295    0.001223
-#       length[50]    0.002062    0.000003    0.000018    0.005217    0.001601
-#       length[51]    0.000932    0.000001    0.000007    0.002560    0.000785
-#       length[52]    0.002968    0.000006    0.000104    0.008395    0.002431
-#       length[53]    0.002133    0.000002    0.000056    0.005268    0.001741
-#       ---------------------------------------------------------------------
-# 
-# 
-# 
-# 
-#       Clade credibility values:
-# 
-#       /---------------------------------------------------------- XP_025261308.1_~ (1)
-#       |
-#       |---------------------------------------------------------- XP_003907894.1~ (16)
-#       |
-#       |---------------------------------------------------------- Q4R6K9.1_Macac~ (20)
-#       |
-#       |                                                 /-------- XP_033086464.1_~ (6)
-#       |                                        /---98---+
-#       |                                        |        \-------- XP_010350948.1~ (19)
-#       |                                /--100--+
-#       |                                |       \----------------- XP_011805264.1_~ (8)
-#       |---------------100--------------+
-#       |                                \------------------------- XP_023075176.1_~ (9)
-#       |
-#       |                                                 /-------- XP_032134401.1_~ (2)
-#       +                                        /---50---+
-#       |                                        |        \-------- XP_002749725.2~ (14)
-#       |                /----------100----------+
-#       |                |                       \----------------- XP_039325526.1~ (18)
-#       |                |
-#       |                |                                /-------- PNI67080.1_Pan_~ (4)
-#       |                |                       /---100--+
-#       |                |                       |        \-------- XP_008972488.1~ (15)
-#       |       /---67---+               /---69--+
-#       |       |        |               |       \----------------- NP_001266520.1~ (12)
-#       |       |        |       /---64--+
-#       |       |        |       |       |                /-------- PNJ73451.1_Pong~ (7)
-#       |       |        |       |       \-------100------+
-#       |       |        \---58--+                        \-------- P0CB68.1_Pongo~ (10)
-#       |       |                |
-#       \---97--+                |                        /-------- XP_030659807.1~ (11)
-#               |                \-----------100----------+
-#               |                                         \-------- XP_032610702.1~ (13)
-#               |
-#               |                                         /-------- XP_015990567.2_~ (3)
-#               |                                /---100--+
-#               |                                |        \-------- XP_006921444.1~ (17)
-#               \---------------100--------------+
-#                                                \----------------- XP_011224853.1_~ (5)
-# 
-# 
-#       Phylogram (based on average branch lengths):
-# 
-#       /----- XP_025261308.1_~ (1)
-#       |
-#       |--- XP_003907894.1~ (16)
-#       |
-#       |---- Q4R6K9.1_Macac~ (20)
-#       |
-#       |           /------- XP_033086464.1_~ (6)
-#       |        /--+
-#       |        |  \---- XP_010350948.1~ (19)
-#       |   /----+
-#       |   |    \----- XP_011805264.1_~ (8)
-#       |---+
-#       |   \---- XP_023075176.1_~ (9)
-#       |
-#       |                             /------------- XP_032134401.1_~ (2)
-#       +                         /---+
-#       |                         |   \-------- XP_002749725.2~ (14)
-#       |          /--------------+
-#       |          |              \------- XP_039325526.1~ (18)
-#       |          |
-#       |          |                 /---- PNI67080.1_Pan_~ (4)
-#       |          |          /------+
-#       |          |          |      \-- XP_008972488.1~ (15)
-#       |    /-----+      /---+
-#       |    |     |      |   \-- NP_001266520.1~ (12)
-#       |    |     |  /---+
-#       |    |     |  |   |        /-- PNJ73451.1_Pong~ (7)
-#       |    |     |  |   \--------+
-#       |    |     \--+            \-- P0CB68.1_Pongo~ (10)
-#       |    |        |
-#       \----+        |      /--- XP_030659807.1~ (11)
-#            |        \------+
-#            |               \----- XP_032610702.1~ (13)
-#            |
-#            |                                       /---- XP_015990567.2_~ (3)
-#            |                /----------------------+
-#            |                |                      \------------- XP_006921444.1~ (17)
-#            \----------------+
-#                             \----------------------- XP_011224853.1_~ (5)
-# 
-#       |-------------| 0.010 expected changes per site
-# 
-#       Calculating tree probabilities...
-# 
-#       Credible sets of trees (385 trees sampled):
-#          50 % credible set contains 92 trees
-#          90 % credible set contains 310 trees
-#          95 % credible set contains 348 trees
-#          99 % credible set contains 378 trees
-# 
-#    Exiting mrbayes block
-#    Reached end of file
+Executing file "sequences-aligned-MUSCLE-mb.nexus"
+   DOS line termination
+   Longest line length = 801
+   Parsing file
+   Expecting NEXUS formatted file
+   Reading taxa block
+      Allocated taxon set
+      Defining new set of 20 taxa
+      Expecting '<name> or <number>'
+      Instead found ':' in command 'Taxlabels'
+      The error occurred when reading char. 30-30 on line 15
+         in the file 'sequences-aligned-MUSCLE-mb.nexus'
 
-# All output files were saved in the same directory. (MrBayes)
+   Returning execution to command line ...
+
+   Error in command "Execute"
+
+MrBayes > execute sequences-aligned-MUSCLE-mb.nexus
+
+   Executing file "sequences-aligned-MUSCLE-mb.nexus"
+   DOS line termination
+   Longest line length = 793
+   Parsing file
+   Expecting NEXUS formatted file
+   Deleting previously defined taxa
+   Reading taxa block
+      Allocated taxon set
+      Defining new set of 20 taxa
+   Exiting taxa block
+   Reading characters block
+      Allocated matrix
+      Defining new character matrix with 741 characters
+      Missing data coded as ?
+      Gaps coded as -
+      Matching characters coded as .
+      Data is Protein
+      Taxon  1 -> XP_025261308.1_Theropithecus_gelada
+      Taxon  2 -> XP_032134401.1_Sapajus_apella
+      Taxon  3 -> XP_015990567.2_Rousettus_aegyptiacus
+      Taxon  4 -> PNI67080.1_Pan_troglodytes
+      Taxon  5 -> XP_011224853.1_Ailuropoda_melanoleuca
+      Taxon  6 -> XP_033086464.1_Trachypithecus_francoisi
+      Taxon  7 -> PNJ73451.1_Pongo_abelii
+      Taxon  8 -> XP_011805264.1_Colobus_angolensis_palliatus
+      Taxon  9 -> XP_023075176.1_Piliocolobus_tephrosceles
+      Taxon 10 -> P0CB68.1_Pongo_pygmaeus
+      Taxon 11 -> XP_030659807.1_Nomascus_leucogenys
+      Taxon 12 -> NP_001266520.1_Gorilla_gorilla
+      Taxon 13 -> XP_032610702.1_Hylobates_moloch
+      Taxon 14 -> XP_002749725.2_Callithrix_jacchus
+      Taxon 15 -> XP_008972488.1_Pan_paniscus
+      Taxon 16 -> XP_003907894.1_Papio_anubis
+      Taxon 17 -> XP_006921444.1_Pteropus_alecto
+      Taxon 18 -> XP_039325526.1_Saimiri_boliviensis_boliviensis
+      Taxon 19 -> XP_010350948.1_Rhinopithecus_roxellana
+      Taxon 20 -> Q4R6K9.1_Macaca_fascicularis
+      Successfully read matrix
+      Setting default partition (does not divide up characters)
+      Setting model defaults
+      Seed (for generating default start values) = 1652145503
+      Setting output file names to "sequences-aligned-MUSCLE-mb.nexus.run<i>.<p|t>"
+   Exiting characters block
+   Reading mrbayes block
+      Setting autoclose to yes
+      Setting Brlenspr to Unconstrained:Exponential(10.00)
+      Successfully set prior model parameters
+      Setting Shapepr to Exponential(1.00)
+      Successfully set prior model parameters
+      Setting Statefreqpr to Dirichlet(1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00)
+      Successfully set prior model parameters
+      Nst =1 unchanged because dataType is not DNA or RNA
+      Setting Rates to Gamma
+      Setting Ngammacat to 4
+      Successfully set likelihood model parameters
+      Setting number of generations to 10000
+      Setting sample frequency to 10
+      Setting print frequency to 100
+      WARNING: Reallocation of zero size attempted. This is probably a bug. Problems may follow.
+      WARNING: Reallocation of zero size attempted. This is probably a bug. Problems may follow.
+      Setting number of runs to 1
+      WARNING: Allocation of zero size attempted. This is probably a bug; problems may follow.
+      Setting number of chains to 3
+      Setting chain output file names to "sequences-aligned-MUSCLE-mb.nexus.<p/t>"
+      Successfully set chain parameters
+      Running Markov chain
+      MCMC stamp = 3119401117
+      Seed = 2003151243
+      Swapseed = 1652145503
+      Model settings:
+
+         Data not partitioned --
+            Datatype  = Protein
+            Aamodel   = Poisson
+                        Substitution rates are fixed to be equal
+            Covarion  = No
+            # States  = 20
+                        State frequencies are fixed to be equal
+            Rates     = Gamma
+                        The distribution is approximated using 4 categories.
+                        Shape parameter is exponentially
+                        distributed with parameter (1.00).
+
+      Active parameters:
+
+         Parameters
+         ---------------------
+         Statefreq           1
+         Shape               2
+         Ratemultiplier      3
+         Topology            4
+         Brlens              5
+         ---------------------
+
+         1 --  Parameter  = Pi
+               Type       = Stationary state frequencies
+               Prior      = Fixed (equal frequencies)
+
+         2 --  Parameter  = Alpha
+               Type       = Shape of scaled gamma distribution of site rates
+               Prior      = Exponential(1.00)
+
+         3 --  Parameter  = Ratemultiplier
+               Type       = Partition-specific rate multiplier
+               Prior      = Fixed(1.0)
+
+         4 --  Parameter  = Tau
+               Type       = Topology
+               Prior      = All topologies equally probable a priori
+               Subparam.  = V
+
+         5 --  Parameter  = V
+               Type       = Branch lengths
+               Prior      = Unconstrained:Exponential(10.0)
+
+
+
+      The MCMC sampler will use the following moves:
+         With prob.  Chain will use move
+            1.96 %   Multiplier(Alpha)
+            9.80 %   ExtSPR(Tau,V)
+            9.80 %   ExtTBR(Tau,V)
+            9.80 %   NNI(Tau,V)
+            9.80 %   ParsSPR(Tau,V)
+           39.22 %   Multiplier(V)
+           13.73 %   Nodeslider(V)
+            5.88 %   TLMultiplier(V)
+
+      Division 1 has 84 unique site patterns
+      Initializing conditional likelihoods
+      Using standard non-SSE likelihood calculator for division 1 (single-precision)
+
+      Initial log likelihoods and log prior probs:
+         Chain 1 -- -3432.143405 -- 29.948048
+         Chain 2 -- -3464.030252 -- 29.948048
+         Chain 3 -- -3431.735416 -- 29.948048
+
+
+      Chain results (10000 generations requested):
+
+          0 -- [-3432.143] (-3464.030) (-3431.735)
+        100 -- (-3193.345) (-3258.342) [-3121.840] -- 0:00:00
+        200 -- (-3003.037) [-3004.716] (-3039.415) -- 0:00:00
+        300 -- (-2992.362) [-2958.022] (-3001.248) -- 0:00:00
+        400 -- (-2969.065) [-2936.972] (-2992.428) -- 0:00:24
+        500 -- [-2932.930] (-2938.098) (-2935.835) -- 0:00:19
+        600 -- (-2923.523) (-2942.777) [-2921.416] -- 0:00:15
+        700 -- (-2914.294) (-2936.620) [-2900.912] -- 0:00:13
+        800 -- (-2911.886) (-2918.463) [-2885.915] -- 0:00:11
+        900 -- (-2907.886) (-2921.460) [-2878.418] -- 0:00:20
+       1000 -- (-2909.551) (-2914.779) [-2881.344] -- 0:00:18
+       1100 -- (-2912.057) (-2926.157) [-2889.929] -- 0:00:16
+       1200 -- (-2909.493) (-2917.633) [-2878.693] -- 0:00:14
+       1300 -- (-2915.499) (-2904.636) [-2884.133] -- 0:00:20
+       1400 -- (-2911.178) (-2905.072) [-2884.603] -- 0:00:18
+       1500 -- (-2916.308) (-2914.867) [-2884.100] -- 0:00:17
+       1600 -- (-2913.819) (-2900.082) [-2874.119] -- 0:00:21
+       1700 -- (-2913.307) (-2895.697) [-2874.850] -- 0:00:19
+       1800 -- (-2901.077) [-2888.193] (-2877.086) -- 0:00:18
+       1900 -- (-2899.945) (-2901.383) [-2884.155] -- 0:00:21
+       2000 -- (-2897.171) [-2889.408] (-2887.931) -- 0:00:20
+       2100 -- (-2892.890) [-2884.997] (-2884.818) -- 0:00:18
+       2200 -- (-2905.422) (-2889.033) [-2878.183] -- 0:00:21
+       2300 -- (-2910.103) (-2893.128) [-2874.843] -- 0:00:20
+       2400 -- (-2897.358) (-2887.226) [-2875.983] -- 0:00:22
+       2500 -- (-2895.601) [-2881.051] (-2885.880) -- 0:00:21
+       2600 -- (-2902.954) [-2882.194] (-2882.380) -- 0:00:19
+       2700 -- (-2880.496) (-2891.924) [-2878.149] -- 0:00:21
+       2800 -- [-2884.532] (-2895.072) (-2889.099) -- 0:00:20
+       2900 -- (-2888.468) [-2892.703] (-2894.697) -- 0:00:19
+       3000 -- (-2898.068) [-2888.765] (-2892.219) -- 0:00:21
+       3100 -- (-2902.110) (-2886.138) [-2892.126] -- 0:00:20
+       3200 -- (-2893.029) [-2885.646] (-2896.767) -- 0:00:19
+       3300 -- [-2892.700] (-2883.930) (-2875.576) -- 0:00:20
+       3400 -- (-2898.409) (-2881.660) [-2876.863] -- 0:00:19
+       3500 -- [-2889.832] (-2885.762) (-2888.726) -- 0:00:18
+       3600 -- [-2893.856] (-2879.822) (-2908.392) -- 0:00:17
+       3700 -- (-2885.340) (-2882.515) [-2890.120] -- 0:00:18
+       3800 -- (-2879.563) [-2884.130] (-2898.235) -- 0:00:17
+       3900 -- (-2875.233) (-2887.805) [-2890.179] -- 0:00:17
+       4000 -- [-2878.675] (-2877.424) (-2880.445) -- 0:00:16
+       4100 -- (-2877.581) (-2884.105) [-2877.978] -- 0:00:17
+       4200 -- [-2876.824] (-2886.133) (-2899.011) -- 0:00:16
+       4300 -- (-2882.421) (-2880.133) [-2884.285] -- 0:00:15
+       4400 -- [-2885.440] (-2887.278) (-2899.570) -- 0:00:16
+       4500 -- (-2895.229) (-2894.008) [-2889.290] -- 0:00:15
+       4600 -- (-2886.777) [-2886.249] (-2879.659) -- 0:00:15
+       4700 -- (-2889.084) (-2881.424) [-2883.523] -- 0:00:15
+       4800 -- (-2891.862) [-2887.741] (-2892.950) -- 0:00:15
+       4900 -- [-2892.134] (-2895.538) (-2890.222) -- 0:00:14
+       5000 -- (-2901.568) (-2885.453) [-2894.448] -- 0:00:15
+       5100 -- (-2907.681) [-2879.999] (-2881.881) -- 0:00:14
+       5200 -- [-2901.842] (-2883.148) (-2887.013) -- 0:00:13
+       5300 -- (-2890.461) [-2882.175] (-2891.156) -- 0:00:14
+       5400 -- (-2895.424) (-2882.365) [-2880.272] -- 0:00:13
+       5500 -- [-2882.909] (-2884.699) (-2884.447) -- 0:00:13
+       5600 -- [-2885.047] (-2892.779) (-2883.220) -- 0:00:13
+       5700 -- (-2886.822) (-2893.890) [-2885.505] -- 0:00:13
+       5800 -- (-2886.742) (-2886.434) [-2885.083] -- 0:00:13
+       5900 -- (-2902.436) (-2875.022) [-2880.853] -- 0:00:13
+       6000 -- (-2886.387) (-2889.658) [-2884.135] -- 0:00:12
+       6100 -- (-2883.457) (-2898.769) [-2875.707] -- 0:00:12
+       6200 -- (-2882.099) (-2882.437) [-2876.176] -- 0:00:11
+       6300 -- (-2883.635) [-2876.285] (-2875.392) -- 0:00:11
+       6400 -- [-2884.788] (-2895.516) (-2884.020) -- 0:00:11
+       6500 -- [-2881.170] (-2901.060) (-2890.883) -- 0:00:10
+       6600 -- [-2876.976] (-2890.993) (-2883.975) -- 0:00:10
+       6700 -- [-2881.064] (-2886.616) (-2886.840) -- 0:00:10
+       6800 -- (-2883.720) (-2901.944) [-2872.753] -- 0:00:09
+       6900 -- [-2884.399] (-2899.683) (-2892.097) -- 0:00:09
+       7000 -- (-2887.606) (-2896.619) [-2886.683] -- 0:00:09
+       7100 -- (-2897.638) (-2885.780) [-2890.101] -- 0:00:08
+       7200 -- (-2890.881) [-2880.184] (-2907.962) -- 0:00:08
+       7300 -- (-2889.410) [-2882.573] (-2894.803) -- 0:00:08
+       7400 -- (-2884.470) [-2897.780] (-2899.357) -- 0:00:08
+       7500 -- (-2891.094) (-2893.398) [-2877.057] -- 0:00:07
+       7600 -- (-2888.455) [-2877.560] (-2884.618) -- 0:00:07
+       7700 -- (-2882.999) [-2879.020] (-2892.912) -- 0:00:07
+       7800 -- (-2897.085) (-2884.153) [-2885.069] -- 0:00:07
+       7900 -- (-2873.771) [-2880.821] (-2893.680) -- 0:00:06
+       8000 -- (-2873.076) [-2882.483] (-2891.433) -- 0:00:06
+       8100 -- [-2883.308] (-2885.228) (-2886.165) -- 0:00:06
+       8200 -- (-2887.893) [-2882.551] (-2889.288) -- 0:00:05
+       8300 -- (-2890.073) [-2882.106] (-2898.918) -- 0:00:05
+       8400 -- (-2883.916) [-2880.618] (-2886.179) -- 0:00:05
+       8500 -- (-2895.453) [-2883.034] (-2892.880) -- 0:00:04
+       8600 -- [-2884.080] (-2878.867) (-2897.989) -- 0:00:04
+       8700 -- (-2900.985) (-2877.941) [-2889.356] -- 0:00:04
+       8800 -- (-2897.797) [-2884.474] (-2885.924) -- 0:00:03
+       8900 -- (-2885.074) (-2878.382) [-2879.535] -- 0:00:03
+       9000 -- (-2881.448) (-2880.018) [-2882.276] -- 0:00:03
+       9100 -- (-2884.996) [-2885.806] (-2888.279) -- 0:00:02
+       9200 -- (-2893.923) [-2890.353] (-2885.691) -- 0:00:02
+       9300 -- (-2886.020) [-2883.672] (-2893.984) -- 0:00:02
+       9400 -- (-2890.000) (-2905.413) [-2877.139] -- 0:00:01
+       9500 -- [-2890.736] (-2900.929) (-2891.920) -- 0:00:01
+       9600 -- (-2889.298) (-2894.649) [-2884.731] -- 0:00:01
+       9700 -- (-2894.943) [-2885.505] (-2874.587) -- 0:00:00
+       9800 -- (-2883.527) (-2883.763) [-2879.391] -- 0:00:00
+       9900 -- (-2890.487) (-2890.472) [-2883.704] -- 0:00:00
+      10000 -- (-2888.698) [-2887.366] (-2891.747) -- 0:00:00
+
+      Analysis completed in 32 seconds
+      Analysis used 32.09 seconds of CPU time
+      Log likelihood of best state for "cold" chain was -2871.49
+
+      Acceptance rates for the moves in the "cold" chain:
+         With prob.   (last 100)   chain accepted proposals by move
+            85.1 %     ( 81 %)     Multiplier(Alpha)
+            16.4 %     ( 15 %)     ExtSPR(Tau,V)
+            15.4 %     ( 13 %)     ExtTBR(Tau,V)
+            26.5 %     ( 30 %)     NNI(Tau,V)
+            18.0 %     ( 16 %)     ParsSPR(Tau,V)
+            77.1 %     ( 79 %)     Multiplier(V)
+            61.7 %     ( 57 %)     Nodeslider(V)
+            26.8 %     ( 26 %)     TLMultiplier(V)
+
+      Chain swap information:
+
+                 1     2     3
+           --------------------
+         1 |        0.61  0.37
+         2 |  3393        0.68
+         3 |  3320  3287
+
+      Upper diagonal: Proportion of successful state exchanges between chains
+      Lower diagonal: Number of attempted state exchanges between chains
+
+      Chain information:
+
+        ID -- Heat
+       -----------
+         1 -- 1.00  (cold chain)
+         2 -- 0.91
+         3 -- 0.83
+
+      Heat = 1 / (1 + T * (ID - 1))
+         (where T = 0.10 is the temperature and ID is the chain number)
+
+      Summarizing trees in file "sequences-aligned-MUSCLE-mb.nexus.t"
+      Using relative burnin ('relburnin=yes'), discarding the first 25 % of sampled trees
+      Writing statistics to files sequences-aligned-MUSCLE-mb.nexus.<parts|tstat|vstat|trprobs|con>
+      Examining file ...
+      Found one tree block in file "sequences-aligned-MUSCLE-mb.nexus.t" with 1001 trees in last block
+
+      Tree reading status:
+
+      0      10      20      30      40      50      60      70      80      90     100
+      v-------v-------v-------v-------v-------v-------v-------v-------v-------v-------v
+      *********************************************************************************
+
+      Read 1001 trees from last tree block (sampling 751 of them)
+
+      General explanation:
+
+      In an unrooted tree, a taxon bipartition (split) is specified by removing a
+      branch, thereby dividing the species into those to the left and those to the
+      right of the branch. Here, taxa to one side of the removed branch are denoted
+      '.' and those to the other side are denoted '*'. Specifically, the '.' symbol
+      is used for the taxa on the same side as the outgroup.
+
+      In a rooted or clock tree, the tree is rooted using the model and not by
+      reference to an outgroup. Each bipartition therefore corresponds to a clade,
+      that is, a group that includes all the descendants of a particular branch in
+      the tree.  Taxa that are included in each clade are denoted using '*', and
+      taxa that are not included are denoted using the '.' symbol.
+
+      The output first includes a key to all the bipartitions with frequency larger
+      or equual to (Minpartfreq) in at least one run. Minpartfreq is a parameter to
+      sumt command and currently it is set to 0.10.  This is followed by a table
+      with statistics for the informative bipartitions (those including at least
+      two taxa), sorted from highest to lowest probability. For each bipartition,
+      the table gives the number of times the partition or split was observed in all
+      runs (#obs) and the posterior probability of the bipartition (Probab.), which
+      is the same as the split frequency. If several runs are summarized, this is
+      followed by the minimum split frequency (Min(s)), the maximum frequency
+      (Max(s)), and the standard deviation of frequencies (Stddev(s)) across runs.
+      The latter value should approach 0 for all bipartitions as MCMC runs converge.
+
+      This is followed by a table summarizing branch lengths, node heights (if a
+      clock model was used) and relaxed clock parameters (if a relaxed clock model
+      was used). The mean, variance, and 95 % credible interval are given for each
+      of these parameters. If several runs are summarized, the potential scale
+      reduction factor (PSRF) is also given; it should approach 1 as runs converge.
+      Node heights will take calibration points into account, if such points were
+      used in the analysis.
+
+      Note that Stddev may be unreliable if the partition is not present in all
+      runs (the last column indicates the number of runs that sampled the partition
+      if more than one run is summarized). The PSRF is not calculated at all if
+      the partition is not present in all runs.The PSRF is also sensitive to small
+      sample sizes and it should only be considered a rough guide to convergence
+      since some of the assumptions allowing one to interpret it as a true potential
+      scale reduction factor are violated in MrBayes.
+
+      List of taxa in bipartitions:
+
+         1 -- XP_025261308.1_Theropithecus_gelada
+         2 -- XP_032134401.1_Sapajus_apella
+         3 -- XP_015990567.2_Rousettus_aegyptiacus
+         4 -- PNI67080.1_Pan_troglodytes
+         5 -- XP_011224853.1_Ailuropoda_melanoleuca
+         6 -- XP_033086464.1_Trachypithecus_francoisi
+         7 -- PNJ73451.1_Pongo_abelii
+         8 -- XP_011805264.1_Colobus_angolensis_palliatus
+         9 -- XP_023075176.1_Piliocolobus_tephrosceles
+        10 -- P0CB68.1_Pongo_pygmaeus
+        11 -- XP_030659807.1_Nomascus_leucogenys
+        12 -- NP_001266520.1_Gorilla_gorilla
+        13 -- XP_032610702.1_Hylobates_moloch
+        14 -- XP_002749725.2_Callithrix_jacchus
+        15 -- XP_008972488.1_Pan_paniscus
+        16 -- XP_003907894.1_Papio_anubis
+        17 -- XP_006921444.1_Pteropus_alecto
+        18 -- XP_039325526.1_Saimiri_boliviensis_boliviensis
+        19 -- XP_010350948.1_Rhinopithecus_roxellana
+        20 -- Q4R6K9.1_Macaca_fascicularis
+
+      Key to taxon bipartitions (saved to file "sequences-aligned-MUSCLE-mb.nexus.parts"):
+
+      ID -- Partition
+      --------------------------
+       1 -- .*******************
+       2 -- .*..................
+       3 -- ..*.................
+       4 -- ...*................
+       5 -- ....*...............
+       6 -- .....*..............
+       7 -- ......*.............
+       8 -- .......*............
+       9 -- ........*...........
+      10 -- .........*..........
+      11 -- ..........*.........
+      12 -- ...........*........
+      13 -- ............*.......
+      14 -- .............*......
+      15 -- ..............*.....
+      16 -- ...............*....
+      17 -- ................*...
+      18 -- .................*..
+      19 -- ..................*.
+      20 -- ...................*
+      21 -- ......*..*..........
+      22 -- .....*.**.........*.
+      23 -- ..........*.*.......
+      24 -- .....*.*..........*.
+      25 -- ...*..........*.....
+      26 -- ..*.............*...
+      27 -- .*...........*...*..
+      28 -- ..*.*...........*...
+      29 -- .....*............*.
+      30 -- .****.*..******.**..
+      31 -- ...*.......*..*.....
+      32 -- .*.*..*..******..*..
+      33 -- ...*..*..*.*..*.....
+      34 -- ...*..*..****.*.....
+      35 -- .*...........*......
+      36 -- .............*...*..
+      37 -- .****.*..******.**.*
+      38 -- .****.*..*********..
+      39 -- .....*.**......*..**
+      40 -- .****.*..*********.*
+      41 -- .....*.**.........**
+      42 -- ...*..*..*....*.....
+      43 -- .....*.**......*..*.
+      44 -- ...............*...*
+      45 -- .**.*........*..**..
+      46 -- .*.*..*..*.*.**..*..
+      47 -- .**************.****
+      48 -- .******************.
+      49 -- ...*......***.*.....
+      50 -- .**************.***.
+      51 -- .*........*.**...*..
+      52 -- ..***.*..****.*.*...
+      53 -- ......*..*.*........
+      --------------------------
+
+      Summary statistics for informative taxon bipartitions
+         (saved to file "sequences-aligned-MUSCLE-mb.nexus.tstat"):
+
+      ID   #obs    Probab.
+      --------------------
+      21   751    1.000000
+      22   751    1.000000
+      23   751    1.000000
+      24   751    1.000000
+      25   751    1.000000
+      26   751    1.000000
+      27   751    1.000000
+      28   751    1.000000
+      29   738    0.982690
+      30   730    0.972037
+      31   520    0.692410
+      32   502    0.668442
+      33   480    0.639148
+      34   433    0.576565
+      35   378    0.503329
+      36   370    0.492676
+      37   183    0.243675
+      38   174    0.231691
+      39   167    0.222370
+      40   162    0.215712
+      41   154    0.205060
+      42   148    0.197071
+      43   148    0.197071
+      44   148    0.197071
+      45   147    0.195739
+      46   130    0.173103
+      47   121    0.161119
+      48   119    0.158455
+      49   111    0.147803
+      50    98    0.130493
+      51    91    0.121172
+      52    89    0.118509
+      53    77    0.102530
+      --------------------
+
+      Summary s  0.010089    0.003116
+      length[4]     0.003449    0.000004    0.000384    0.007043    0.003070
+      length[5]     0.017019    0.000042    0.007554    0.031530    0.015809
+      length[6]     0.004676    0.000006    0.001051    0.009650    0.004387
+      length[7]     0.001573    0.000002    0.000002    0.004162    0.001216
+      length[8]     0.003981    0.000007    0.000142    0.009309    0.003389
+      length[9]     0.003150    0.000005    0.000330    0.007947    0.002605
+      length[10]    0.001764    0.000003    0.000003    0.004800    0.001401
+      length[11]    0.002750    0.000004    0.000421    0.006513    0.002174
+      length[12]    0.001918    0.000003    0.000065    0.005682    0.001419
+      length[13]    0.004445    0.000009    0.000282    0.009556    0.003957
+      length[14]    0.006091    0.000013    0.001037    0.012498    0.005211
+      length[15]    0.002262    0.000004    0.000008    0.007065    0.001779
+      length[16]    0.002147    0.000002    0.000050    0.004905    0.001859
+      length[17]    0.009356    0.000015    0.003333    0.016365    0.008921
+      length[18]    0.005304    0.000012    0.000644    0.012032    0.004722
+      length[19]    0.002863    0.000004    0.000489    0.006687    0.002417
+      length[20]    0.003136    0.000004    0.000166    0.006617    0.002839
+      length[21]    0.006446    0.000011    0.001119    0.013196    0.005971
+      length[22]    0.003587    0.000006    0.000517    0.008515    0.002997
+      length[23]    0.004475    0.000005    0.000821    0.008823    0.004314
+      length[24]    0.003679    0.000006    0.000228    0.008248    0.003048
+      length[25]    0.005244    0.000010    0.000599    0.010422    0.004645
+      length[26]    0.016042    0.000030    0.006119    0.026545    0.015647
+      length[27]    0.010937    0.000023    0.004074    0.020566    0.010250
+      length[28]    0.012318    0.000025    0.004411    0.022970    0.011404
+      length[29]    0.002819    0.000004    0.000113    0.007175    0.002436
+      length[30]    0.004252    0.000008    0.000597    0.009744    0.003590
+      length[31]    0.002698    0.000004    0.000073    0.006260    0.002420
+      length[32]    0.004153    0.000011    0.000167    0.010872    0.003694
+      length[33]    0.003520    0.000007    0.000241    0.009737    0.002810
+      length[34]    0.003185    0.000007    0.000030    0.007494    0.002503
+      length[35]    0.003613    0.000006    0.000076    0.007292    0.003091
+      length[36]    0.003426    0.000005    0.000060    0.008059    0.003044
+      length[37]    0.001957    0.000003    0.000009    0.005219    0.001531
+      length[38]    0.001954    0.000003    0.000051    0.004611    0.001436
+      length[39]    0.002208    0.000006    0.000012    0.007370    0.001262
+      length[40]    0.002244    0.000007    0.000016    0.009140    0.001290
+      length[41]    0.001605    0.000003    0.000055    0.004710    0.001065
+      length[42]    0.002902    0.000006    0.000074    0.006775    0.002261
+      length[43]    0.001917    0.000003    0.000074    0.005307    0.001412
+      length[44]    0.001670    0.000003    0.000091    0.005096    0.001173
+      length[45]    0.002586    0.000006    0.000325    0.009570    0.001401
+      length[46]    0.001295    0.000001    0.000007    0.003373    0.000859
+      length[47]    0.001685    0.000002    0.000059    0.004162    0.001276
+      length[48]    0.001789    0.000003    0.000102    0.004055    0.001371
+      length[49]    0.001484    0.000002    0.000025    0.003295    0.001223
+      length[50]    0.002062    0.000003    0.000018    0.005217    0.001601
+      length[51]    0.000932    0.000001    0.000007    0.002560    0.000785
+      length[52]    0.002968    0.000006    0.000104    0.008395    0.002431
+      length[53]    0.002133    0.000002    0.000056    0.005268    0.001741
+      ---------------------------------------------------------------------
+
+
+
+
+       Clade credibility values:
+
+      /---------------------------------------------------------- XP_025261308.1_~ (1)
+      |
+      |---------------------------------------------------------- XP_003907894.1~ (16)
+      |
+      |---------------------------------------------------------- Q4R6K9.1_Macac~ (20)
+      |
+      |                                                 /-------- XP_033086464.1_~ (6)
+      |                                        /---98---+
+      |                                        |        \-------- XP_010350948.1~ (19)
+      |                                /--100--+
+      |                                |       \----------------- XP_011805264.1_~ (8)
+      |---------------100--------------+
+      |                                \------------------------- XP_023075176.1_~ (9)
+      |
+      |                                                 /-------- XP_032134401.1_~ (2)
+      +                                        /---50---+
+      |                                        |        \-------- XP_002749725.2~ (14)
+      |                /----------100----------+
+      |                |                       \----------------- XP_039325526.1~ (18)
+      |                |
+      |                |                                /-------- PNI67080.1_Pan_~ (4)
+      |                |                       /---100--+
+      |                |                       |        \-------- XP_008972488.1~ (15)
+      |       /---67---+               /---69--+
+      |       |        |               |       \----------------- NP_001266520.1~ (12)
+      |       |        |       /---64--+
+      |       |        |       |       |                /-------- PNJ73451.1_Pong~ (7)
+      |       |        |       |       \-------100------+
+      |       |        \---58--+                        \-------- P0CB68.1_Pongo~ (10)
+      |       |                |
+      \---97--+                |                        /-------- XP_030659807.1~ (11)
+              |                \-----------100----------+
+              |                                         \-------- XP_032610702.1~ (13)
+              |
+              |                                         /-------- XP_015990567.2_~ (3)
+              |                                /---100--+
+              |                                |        \-------- XP_006921444.1~ (17)
+              \---------------100--------------+
+                                               \----------------- XP_011224853.1_~ (5)
+
+
+      Phylogram (based on average branch lengths):
+
+      /----- XP_025261308.1_~ (1)
+      |
+      |--- XP_003907894.1~ (16)
+      |
+      |---- Q4R6K9.1_Macac~ (20)
+      |
+      |           /------- XP_033086464.1_~ (6)
+      |        /--+
+      |        |  \---- XP_010350948.1~ (19)
+      |   /----+
+      |   |    \----- XP_011805264.1_~ (8)
+      |---+
+      |   \---- XP_023075176.1_~ (9)
+      |
+      |                             /------------- XP_032134401.1_~ (2)
+      +                         /---+
+      |                         |   \-------- XP_002749725.2~ (14)
+      |          /--------------+
+      |          |              \------- XP_039325526.1~ (18)
+      |          |
+      |          |                 /---- PNI67080.1_Pan_~ (4)
+      |          |          /------+
+      |          |          |      \-- XP_008972488.1~ (15)
+      |    /-----+      /---+
+      |    |     |      |   \-- NP_001266520.1~ (12)
+      |    |     |  /---+
+      |    |     |  |   |        /-- PNJ73451.1_Pong~ (7)
+      |    |     |  |   \--------+
+      |    |     \--+            \-- P0CB68.1_Pongo~ (10)
+      |    |        |
+      \----+        |      /--- XP_030659807.1~ (11)
+           |        \------+
+           |               \----- XP_032610702.1~ (13)
+           |
+           |                                       /---- XP_015990567.2_~ (3)
+           |                /----------------------+
+           |                |                      \------------- XP_006921444.1~ (17)
+           \----------------+
+                            \----------------------- XP_011224853.1_~ (5)
+
+        |-------------| 0.010 expected changes per site
+
+       Calculating tree probabilities...
+
+       Credible sets of trees (385 trees sampled):
+          50 % credible set contains 92 trees
+          90 % credible set contains 310 trees
+          95 % credible set contains 348 trees
+          99 % credible set contains 378 trees
+
+    Exiting mrbayes block
+    Reached end of file
+
+ All output files were saved in the same directory. (MrBayes)tatistics for branch and node parameters
+          (saved to file "sequences-aligned-MUSCLE-mb.nexus.vstat"):
+
+                                               95% HPD Interval
+                                             --------------------
+       Parameter      Mean       Variance     Lower       Upper       Median
+       ---------------------------------------------------------------------
+       length[1]     0.004294    0.000008    0.000296    0.010287    0.003530
+       length[2]     0.009473    0.000015    0.003447    0.017463    0.009035
+       length[3]     0.004083    0.000011    0.000058
+
