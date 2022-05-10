@@ -113,7 +113,7 @@ cd Software
 mkdir ClustalW2
 '''
 
-##### I downlaoded [ClustalW2 for windows](http://www.clustal.org/download/current/) and put it in the ClustalW2 directory
+##### I downloaded [ClustalW2 for windows](http://www.clustal.org/download/current/) as clustalw-2.1-win.msi, followed the installation instructions of the file, and put clustalw2.exe in the ClustalW2 directory
 
 ##### I went to the data directory and copy and pasted the raw-sequences.txt file into my directory for ClustalW2.
 ```
@@ -380,11 +380,16 @@ FASTA file created!
 
 ### MUSCLE
 
-##### I copy and pasted the raw-sequences.txt file into my directory for MUSCLE and change to that directory.
+##### I copy and pasted the raw-sequences.txt file into a new directory for MUSCLE and changed to that directory.
 ```
+cd ../
+mkdir MUSCLE
+cd ../data
 cp raw-sequences.txt ../Software/MUSCLE
 cd ../MUSCLE
 ```
+
+##### I downloaded [MUSCLE](https://github.com/rcedgar/muscle/releases/tag/v5.1) as muscle5.1win64exe into the new MUSCLE directory
 
 ##### Run the following command to allign data
 ```
@@ -502,10 +507,19 @@ plot(tre.pars_aa_MUSCLE, cex=0.2)
 
 All 4 trees saved in figures directory as PDFs with "tree type (distance/parsimony)-tree-alignment method (clustalw2/MUSCLE)" as the file name
 
+##### Orthologs were not present, so ortholoy methods were skipped.
+
 # Maximum Likelihood method
 
 
 I will be using IQ-Tree to construct my maximum-likelihood trees.
+
+##### Create and enter IQ-Tree directory in the Software directory
+'''
+cd ../
+mkdir IQTree
+cd IQTree
+'''
 
 ##### I copy and pasted both of the aligned sequences files into my directory for IQ-Tree. Also move into the IQ-Tree directory.
 ```
@@ -515,7 +529,7 @@ cp sequences-aligned-clustalw2.fasta ../IQTree
 cd ../IQTree
 ```
 
-##### Run the commands to create maximum likelihood trees for sequences of both alignment methods. These commands utilize ModelFinder Plus, which tells IQ-Tree to perform analysis using the substitution model with the minimum Bayesian information criterion score.
+##### I downloaded [IQ-Tree](http://www.iqtree.org/#download) as iqtree-1.6.12-Windows.zip and extracted it into my IQtree directory before running the commands to create maximum likelihood trees for sequences of both alignment methods. These commands utilize ModelFinder Plus, which tells IQ-Tree to perform analysis using the substitution model with the minimum Bayesian information criterion score.
 '''
 bin/iqtree -s sequences-aligned-muscle.fasta
 '''
@@ -1314,6 +1328,31 @@ Total wall-clock time used: 2.767 sec (0h:0m:2s)
 
 
 I will be using MrBayes for bayesian implementation. 
+
+##### Make a directory for MrBayes in the Software directory and enter it
+'''
+cd ../
+mkdir MrBayes
+cd MrBayes
+
+##### I downloaded WSL by opening Windows Command Prompt and typing the following command before restarting my computer
+'''
+wsl --install
+'''
+
+##### I then had to install Homebrew for WSL, a prerequisite of MrBayes on my machine
+'''
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+brew install wget
+'''
+
+##### Finally, I could install MrBayes as instructed
+'''
+brew tap brewsci/bio
+brew install mrbayes
+
+##### I located MrBayes on my machine and moved it to my MrBayes directory
 
 ##### Create MrBayes block in a separate text file called mbblock.txt
 '''
