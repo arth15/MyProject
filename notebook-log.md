@@ -52,7 +52,7 @@ PKDCFIIYQGHHGDVGAPIADVILPGAAYTEKSATYVNTEGRAQQTKVAVTPPGLAREDWKIIRALSEIA
 GMTLPYDTLDQVRNRLEEVSPNLVRYDDIEGANYFQQANELSKLVNQQLLADPLVPPQLTIKDFYMTDSI
 SRASQTMAKCVKAVTEGAQAVEEPSIC
 
-Next, I entered the above amino acid sequence as the query sequence on NCBI's BLASTp. I searched the standard, non-redundant protein sequences database and exluded Homo sapiens from the hits. BLASTp's algorithm parameters were kept as default, with 100 max target sequences and an expect threshold of 0.05. 
+Next, I entered the above amino acid sequence as the query sequence on NCBI's BLASTp. I searched the standard, non-redundant protein sequences database and excluded Homo sapiens from the hits. BLASTp's algorithm parameters were kept as default, with 100 max target sequences and an expect threshold of 0.05. 
 
 
 # Quality control:
@@ -103,7 +103,8 @@ cd Desktop/Botany563/MyProject
 # Multiple sequence allignment:
 
 
-I will be aligning my sequences using ClustalW2 and MUSCLE with the purpose of comparing the results.
+##### I will be aligning my sequences using ClustalW2 and MUSCLE with the purpose of comparing the results. ClustalW2 uses pairwise alignment in order to create a distance matrix and a tree based on neighbor-joining. Features of ClustalW2 include varying gap penalties, down-weighted sequences compared to the relation between sequences, and different weight matrices in order to conserve AA matches and identities. Advantages of the program include being able to work with DNA or protein, fast execution, scalability, and leniency with input format. Some drawbacks of the program include the given guide tree having a huge impact on resulting alignments and the fact that errors created can compound along the pipeline, as alignments are rarely changed. MUSCLE, on the other hand, uses consistency-based scoring in order to address the problem of local-minimums in progressive alignment. It finds the MSA that will minimize the cost of alignment, using a weighted sum of pairs method. It is advantageous because it has been found to be more accurate and more timely than ClustalW2. However, MUSCLE is not as scalable as ClustalW2 is for larger alignments, a clear drawback.
+
 
 ### ClustalW2
 
@@ -435,7 +436,7 @@ aa_alignment_clustalw2 <- read.phyDat("sequences-aligned-clustalw2.fasta", forma
 aa_clustalw2 <- as.AAbin(aa_alignment_clustalw2)
 ```
 
-##### create AAbin object using WAG AA model
+##### create AAbin object using WAG AA model. It is an amino acid replacement matrix for globular proteins. It was used because it combines useful aspects of other models including scalability and likelihood.
 ```
 D_aa_clustalw2 <- dist.ml(aa_clustalw2, model="WAG")
 
@@ -470,7 +471,7 @@ title("NJ distance-based tree (aligned with MUSCLE)")
 
 # Parsimony-based method
 
-##### Change working directory back to Clustalw2 directory and run commands to create parsimony-based tree of Clustalw2 aligned data using JTT model
+##### Change working directory back to Clustalw2 directory and run commands to create parsimony-based tree of Clustalw2 aligned data using the JTT model, another amino acid replacement matrix. This one was used for its robust algorithm and its commonplace in the field.  
 ```
 cd ../ClustalW2
 aa2_clustalw2 <- as.phyDat.AAbin(aa_clustalw2)
@@ -512,7 +513,7 @@ All 4 trees saved in figures directory as PDFs with "tree type (distance/parsimo
 # Maximum Likelihood method
 
 
-I will be using IQ-Tree to construct my maximum-likelihood trees.
+##### I will be using IQ-Tree to construct my maximum-likelihood trees. IQ-Tree is an efficient algorithm for creating trees based on maximum likelihood and it uses a model finder (ModelFinder Pro) which is built-in for rate variation model selection. Strengths of this software include having better performance than similar programs like RaxML and PhyML, customizability in terms of parameters and models, and its use of starting trees. Some limitations of this software are that it isn't a sure-fire way to get the best tree, other programs like RaxML and PhyML may be better in this regard. It is also difficult to compare for the computing time against similar, previously mentioned methods. Its assumptions are that amino acid sequences are between 50-600 AA's in length, and the alignment length is 2-4x that of the sequences. It also assumes that the proportion of gaps or unknown characters is less than or equal to 0.700.
 
 ##### Create and enter IQ-Tree directory in the Software directory
 ```
@@ -1322,12 +1323,12 @@ Total wall-clock time used: 2.767 sec (0h:0m:2s)
 
 > Date and Time: Mon May 09 17:31:21 2022
 
-##### Trees were visualized using iTOL, the free website. They were downloaded into the figures directory under the name "ML-tree-ALIGNMENT METHOD (MUSCLE or clustalw2)-aligned.pdf"
+##### Trees were visualized using iTOL, the free website. iTOL is an online tool that allows users to manipulate, annotate, or just view their trees. They were downloaded into the figures directory under the name "ML-tree-ALIGNMENT METHOD (MUSCLE or clustalw2)-aligned.pdf"
 
 # Bayesian Implementation
 
 
-I will be using MrBayes for bayesian implementation. 
+##### For Bayesian inferencing, I will use MrBayes, which performs inference using Markov Chain Monte Carlo algorithms for sampling from the probability distribution. It uses the same models as maximum likelihood methods and includes setting priors, estimating parameters, and calculating posterior probability distribution. The biggest advantages of MrBayes are ease in interpreting results, ability to use priors, and customizability (mixing models, unlinking topology from branch length, etc.). Some limitations of MrBayes include the potential to overdo parameterization, potential bias from choice in priors, and time (needs to be run long enough to get a good tree from a local optimum). Its main assumption is that substitutions are done using the simplest point process: a time-homogeneous Poisson process.
 
 ##### Make a directory for MrBayes in the Software directory and enter it
 ```
@@ -1368,7 +1369,9 @@ begin mrbayes;
 end;
 ```
 
-##### Copy and paste MUSCLE and Clustalw2 aligned sequences into MrBayes directory. Use MEGA-X software to export both fasta files into nexus files, which are inputs for MrBayes. Open one file -> analyze -> Data -> Export sequences -> NEXUS. (Make sure to send file to MrBayes directory under original name with .nexus) Repeat for second file. Change to MrBayes directory and append the MrBayes block to the aligned sequence files. In order to do this with the MUSCLE aligned sequences, I needed to shorten the names of the taxa including everything from "NADH" to the actual species name in each of the 20 sequences. Also needed to remove phrases from sequence names such as "PREDICTED:" and "RecName:"
+##### Copy and paste MUSCLE and Clustalw2 aligned sequences into MrBayes directory. Use MEGA-X software to export both fasta files into nexus files, which are inputs for MrBayes. Open one file -> analyze -> Data -> Export sequences -> NEXUS. (Make sure to send file to MrBayes directory under original name with .nexus) Repeat for second file. MEGA-x includes many analytical tools for phylogenomics, but for my purposes, it was only used to view my alignments.
+
+##### Change to MrBayes directory and append the MrBayes block to the aligned sequence files. In order to do this with the MUSCLE aligned sequences, I needed to shorten the names of the taxa including everything from "NADH" to the actual species name in each of the 20 sequences. Also needed to remove phrases from sequence names such as "PREDICTED:" and "RecName:"
 
 ```
 cd ../MrBayes/MrBayes
