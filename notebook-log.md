@@ -30,9 +30,8 @@ mkdir MyProject
 ```
 mkdir data
 mkdir figures
-mkdir manuscript
 mkdir results
-mkdir scripts
+mkdir Software
 ```
 
 # Data collection:
@@ -98,7 +97,6 @@ cd ../
 cd Downloads
 mv raw-sequences.txt Botany563/MyProject/data
 cd Desktop/Botany563/MyProject
-cd data
 ```
 
 
@@ -109,8 +107,17 @@ I will be aligning my sequences using ClustalW2 and MUSCLE with the purpose of c
 
 ### ClustalW2
 
-##### I copy and pasted the raw-sequences.txt file into my directory for ClustalW2.
+##### I made a directory for ClustalW2 in the Software directory
+'''
+cd Software
+mkdir ClustalW2
+'''
+
+##### I downlaoded [ClustalW2 for windows](http://www.clustal.org/download/current/) and put it in the ClustalW2 directory
+
+##### I went to the data directory and copy and pasted the raw-sequences.txt file into my directory for ClustalW2.
 ```
+cd ../data
 cp raw-sequences.txt ../Software/ClustalW2
 ```
 
