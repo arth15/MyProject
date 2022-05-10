@@ -108,10 +108,10 @@ I will be aligning my sequences using ClustalW2 and MUSCLE with the purpose of c
 ### ClustalW2
 
 ##### I made a directory for ClustalW2 in the Software directory
-'''
+```
 cd Software
 mkdir ClustalW2
-'''
+```
 
 ##### I downloaded [ClustalW2 for windows](http://www.clustal.org/download/current/) as clustalw-2.1-win.msi, followed the installation instructions of the file, and put clustalw2.exe in the ClustalW2 directory
 
@@ -515,11 +515,11 @@ All 4 trees saved in figures directory as PDFs with "tree type (distance/parsimo
 I will be using IQ-Tree to construct my maximum-likelihood trees.
 
 ##### Create and enter IQ-Tree directory in the Software directory
-'''
+```
 cd ../
 mkdir IQTree
 cd IQTree
-'''
+```
 
 ##### I copy and pasted both of the aligned sequences files into my directory for IQ-Tree. Also move into the IQ-Tree directory.
 ```
@@ -530,9 +530,9 @@ cd ../IQTree
 ```
 
 ##### I downloaded [IQ-Tree](http://www.iqtree.org/#download) as iqtree-1.6.12-Windows.zip and extracted it into my IQtree directory before running the commands to create maximum likelihood trees for sequences of both alignment methods. These commands utilize ModelFinder Plus, which tells IQ-Tree to perform analysis using the substitution model with the minimum Bayesian information criterion score.
-'''
+```
 bin/iqtree -s sequences-aligned-muscle.fasta
-'''
+```
 
 >IQ-TREE multicore version 1.6.12 for Windows 64-bit built Aug 15 2019
 Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
@@ -926,9 +926,9 @@ Total wall-clock time used: 2.704 sec (0h:0m:2s)
 
 > Date and Time: Mon May 09 17:28:42 2022
 
-'''
+```
 bin/iqtree -s sequences-aligned-clustalw2.fasta
-'''
+```
 
 > IQ-TREE multicore version 1.6.12 for Windows 64-bit built Aug 15 2019
 Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
@@ -1330,32 +1330,32 @@ Total wall-clock time used: 2.767 sec (0h:0m:2s)
 I will be using MrBayes for bayesian implementation. 
 
 ##### Make a directory for MrBayes in the Software directory and enter it
-'''
+```
 cd ../
 mkdir MrBayes
 cd MrBayes
 
 ##### I downloaded WSL by opening Windows Command Prompt and typing the following command before restarting my computer
-'''
+```
 wsl --install
-'''
+```
 
 ##### I then had to install Homebrew for WSL, a prerequisite of MrBayes on my machine
-'''
+```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 brew install wget
-'''
+```
 
 ##### Finally, I could install MrBayes as instructed
-'''
+```
 brew tap brewsci/bio
 brew install mrbayes
 
 ##### I located MrBayes on my machine and moved it to my MrBayes directory
 
 ##### Create MrBayes block in a separate text file called mbblock.txt
-'''
+```
 begin mrbayes;
  set autoclose=yes;
  prset brlenspr=unconstrained:exp(10.0);
@@ -1366,15 +1366,15 @@ begin mrbayes;
  mcmc;
  sumt;
 end;
-'''
+```
 
 ##### Copy and paste MUSCLE and Clustalw2 aligned sequences into MrBayes directory. Use MEGA-X software to export both fasta files into nexus files, which are inputs for MrBayes. Open one file -> analyze -> Data -> Export sequences -> NEXUS. (Make sure to send file to MrBayes directory under original name with .nexus) Repeat for second file. Change to MrBayes directory and append the MrBayes block to the aligned sequence files. In order to do this with the MUSCLE aligned sequences, I needed to shorten the names of the taxa including everything from "NADH" to the actual species name in each of the 20 sequences. Also needed to remove phrases from sequence names such as "PREDICTED:" and "RecName:"
 
-'''
+```
 cd ../MrBayes/MrBayes
 cat sequences-aligned-clustalw2.nexus mbblock.txt > sequences-aligned-clustalw2-mb.nexus
 cat sequences-aligned-MUSCLE.nexus mbblock.txt > sequences-aligned-MUSCLE-mb.nexus
-'''
+```
 
 ##### Run MrBayes with both new files
 mb sequences-aligned-clustalw2-mb.nexus
